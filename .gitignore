@@ -1,0 +1,12 @@
+node_modules
+*.log*
+.nitro
+.cache
+.output
+.env
+dist
+.idea
+.vscode
+.eslintcache
+.DS_Store
+
