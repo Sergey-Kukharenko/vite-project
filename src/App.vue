@@ -21,4 +21,10 @@ import AppBtn from './components/app-btn.vue';
   <div class="row-example">
     <h2>This is h2 tag</h2>
   </div>
+  <div class="row-example">
+    <h3>This is h3 tag</h3>
+  </div>
+  <div class="row-example">
+    <h4>This is h4 tag</h4>
+  </div>
 </template>
