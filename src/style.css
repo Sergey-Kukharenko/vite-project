@@ -110,6 +110,14 @@ h1, h2, h3, h4 {
   font-weight: bold;
 }
 
+.text-xxl {
+  line-height: 30px;
+}
+
+.text-xl {
+  font-size: 20px;
+}
+
 @media screen and (min-width: 1024px) {
   h1 {
     font-size: 40px;
@@ -129,6 +137,14 @@ h1, h2, h3, h4 {
   h4 {
     font-size: 18px;
     line-height: 26px;
+  }
+
+  .text-xxl {
+    font-size: 22px;
+  }
+
+  .text-xl {
+    line-height: 32px;
   }
 }
 
@@ -152,6 +168,14 @@ h1, h2, h3, h4 {
     font-size: 18px;
     line-height: 26px;
   }
+
+  .text-xxl {
+    font-size: 21px;
+  }
+
+  .text-xl {
+    line-height: 30px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -173,5 +197,13 @@ h1, h2, h3, h4 {
   h4 {
     font-size: 19px;
     line-height: 25px;
+  }
+
+  .text-xxl {
+    font-size: 21px;
+  }
+
+  .text-xl {
+    line-height: 30px;
   }
 }
