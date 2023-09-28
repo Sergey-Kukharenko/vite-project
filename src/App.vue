@@ -4,6 +4,10 @@ import AppBtn from './components/app-btn.vue';
 
 <template>
   <div class="row-example">
+    <app-btn tag="a">link</app-btn>
+    <app-btn tag="a" href="/some" target="_blank">link</app-btn>
+  </div>
+  <div class="row-example">
     <app-btn disabled>button</app-btn>
     <app-btn size="small">button</app-btn>
     <app-btn>button</app-btn>

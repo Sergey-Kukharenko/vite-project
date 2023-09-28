@@ -2,9 +2,30 @@
 import { computed } from 'vue';
 
 const props = defineProps({
+  tag: {
+    type: String,
+    default: 'button',
+    validator(value) {
+      return ['button', 'a'].includes(value);
+    }
+  },
+
+  href: {
+    type: String,
+    default: null
+  },
+
+  target: {
+    type: String,
+    default: null,
+    validator(value) {
+      return ['_blank', '_self', '_parent', '_top'].includes(value);
+    }
+  },
+
   disabled: {
     type: Boolean,
-    default: false,
+    default: false
   },
 
   appearance: {
@@ -12,7 +33,7 @@ const props = defineProps({
     default: 'yellow',
     validator(value) {
       return ['yellow', 'ghost'].includes(value);
-    },
+    }
   },
 
   size: {
@@ -20,21 +41,30 @@ const props = defineProps({
     default: 'medium',
     validator(value) {
       return ['small', 'medium', 'large'].includes(value);
-    },
-  },
+    }
+  }
 });
 
 const classNames = computed(() => ({
   btn: true,
   [`btn--${props.appearance}`]: props.appearance,
-  [`btn--${props.size}`]: props.size,
+  [`btn--${props.size}`]: props.size
 }));
+
+const componentProps = computed(() =>
+  props.tag === 'button'
+    ? { disabled: props.disabled }
+    : {
+        href: props.href,
+        target: props.target
+      }
+);
 </script>
 
 <template>
-  <button :class="classNames" :disabled="disabled">
+  <component :is="tag" v-bind="componentProps" :class="classNames">
     <slot />
-  </button>
+  </component>
 </template>
 
 <style scoped></style>
