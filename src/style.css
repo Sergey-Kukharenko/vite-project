@@ -1,3 +1,13 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --yellow: #ffc42e;
+  --grey: #c4c4c4;
+  --grey-light: #e7e7e7;
+  --red: #d01012;
+  --blue: #005be4;
+}
+
 html {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
@@ -22,16 +32,8 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--blue);
   text-decoration: none;
-}
-
-:root {
-  --white: #ffffff;
-  --black: #000000;
-  --yellow: #ffc42e;
-  --grey: #c4c4c4;
-  --grey-light: #e7e7e7;
 }
 
 .row-example {
@@ -55,13 +57,13 @@ a {
 
   font-weight: 700;
   line-height: normal;
+  color: var(--black);
 
   border: none;
   outline: none;
 
-  transition:
-    color 0.25s,
-    background-color 0.25s;
+  transition: color 0.25s,
+  background-color 0.25s;
 }
 
 .btn:disabled {
@@ -124,6 +126,10 @@ h4 {
   font-size: 20px;
 }
 
+.text-error {
+  color: var(--red);
+}
+
 @media screen and (min-width: 1024px) {
   h1 {
     font-size: 40px;
@@ -158,10 +164,21 @@ h4 {
     line-height: 26px;
   }
 
+  a,
   p,
   .text-md {
     font-size: 16px;
     line-height: 22px;
+  }
+
+  .text-sm {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .text-xs {
+    font-size: 13px;
+    line-height: 18px;
   }
 }
 
@@ -199,10 +216,21 @@ h4 {
     line-height: 28px;
   }
 
+  a,
   p,
   .text-md {
     font-size: 18px;
     line-height: 25px;
+  }
+
+  .text-sm {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .text-xs {
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
@@ -238,5 +266,22 @@ h4 {
   .text-lg {
     font-size: 20px;
     line-height: 28px;
+  }
+
+  a,
+  p,
+  .text-md {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .text-sm {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .text-xs {
+    font-size: 14px;
+    line-height: 16px;
   }
 }

@@ -1,5 +1,5 @@
 <script setup>
-import AppBtn from './components/app-btn.vue';
+import AppBtn from './components/AppBtn.vue';
 </script>
 
 <template>
@@ -32,27 +32,27 @@ import AppBtn from './components/app-btn.vue';
     <h4>This is h4 tag</h4>
   </div>
   <div class="row-example">
-    <div class="text-xxl">
-      Лид. Цифры и факты о том, как все начиналось и что стоит за всемирно известным брендом. А также увлекательные
-      истории и яркие события из жизни нашей компании ждут вас. Итак, начнем!
-    </div>
+    <div class="text-xxl">This is an example text.</div>
   </div>
   <div class="row-example">
-    <div class="text-xl">
-      Лид. Цифры и факты о том, как все начиналось и что стоит за всемирно известным брендом. А также увлекательные
-      истории и яркие события из жизни нашей компании ждут вас. Итак, начнем!
-    </div>
+    <div class="text-xl">This is an example text.</div>
   </div>
   <div class="row-example">
-    <div class="text-lg">
-      Лид. Цифры и факты о том, как все начиналось и что стоит за всемирно известным брендом. А также увлекательные
-      истории и яркие события из жизни нашей компании ждут вас. Итак, начнем!
-    </div>
+    <div class="text-lg">This is an example text.</div>
   </div>
   <div class="row-example">
-    <p>
-      Лид. Цифры и факты о том, как все начиналось и что стоит за всемирно известным брендом. А также увлекательные
-      истории и яркие события из жизни нашей компании ждут вас. Итак, начнем!
-    </p>
+    <p>This is an example text.</p>
+  </div>
+  <div class="row-example">
+    <div class="text-sm">This is an example text.</div>
+  </div>
+  <div class="row-example">
+    <div class="text-xs">This is an example text.</div>
+  </div>
+  <div class="row-example">
+    <div class="text-xs text-error">This is an example text.</div>
+  </div>
+  <div class="row-example">
+    <a href="#">This is an example text.</a>
   </div>
 </template>

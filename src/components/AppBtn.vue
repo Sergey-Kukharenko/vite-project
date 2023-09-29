@@ -62,7 +62,7 @@ const componentProps = computed(() =>
 </script>
 
 <template>
-  <component :is="tag" v-bind="componentProps" :class="classNames">
+  <component :is="tag" :class="classNames" v-bind="componentProps">
     <slot />
   </component>
 </template>
