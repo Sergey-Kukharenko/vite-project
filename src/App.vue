@@ -53,6 +53,9 @@ import AppBtn from './components/btn/AppBtn.vue';
     <div class="text-xs text-error">This is an example text.</div>
   </div>
   <div class="row-example">
+    <div class="text-xs text-grey">This is an example text.</div>
+  </div>
+  <div class="row-example">
     <a href="#">This is an example text.</a>
   </div>
 </template>

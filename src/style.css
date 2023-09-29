@@ -3,6 +3,7 @@
   --black: #000000;
   --yellow: #ffc42e;
   --grey: #c4c4c4;
+  --grey-dark: #868686;
   --grey-light: #e7e7e7;
   --red: #d01012;
   --blue: #005be4;
@@ -47,69 +48,6 @@ a {
   margin: 0.2em;
 }
 
-/*btn*/
-.btn {
-  cursor: pointer;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  font-weight: 700;
-  line-height: normal;
-  color: var(--black);
-
-  border: none;
-  outline: none;
-
-  transition: color 0.25s,
-  background-color 0.25s;
-}
-
-.btn:disabled {
-  cursor: none;
-  color: var(--grey);
-  background: var(--grey-light);
-  border: none;
-}
-
-.btn:not(:disabled):hover {
-  color: var(--white);
-  background: var(--black);
-}
-
-.btn--yellow {
-  background: var(--yellow);
-}
-
-.btn--ghost {
-  background: none;
-  border: 1px solid var(--black);
-}
-
-.btn--small {
-  padding: 0 15px;
-  font-size: 14px;
-  line-height: 30px;
-  border-radius: 15px;
-}
-
-.btn--medium {
-  padding: 0 20px;
-  font-size: 16px;
-  line-height: 40px;
-  border-radius: 20px;
-}
-
-.btn--large {
-  padding: 0 25px;
-  font-size: 18px;
-  line-height: 50px;
-  border-radius: 25px;
-}
-
-/*end btn*/
-
 /*typography*/
 h1,
 h2,
@@ -128,6 +66,10 @@ h4 {
 
 .text-error {
   color: var(--red);
+}
+
+.text-grey {
+  color: var(--grey-dark);
 }
 
 @media screen and (min-width: 1024px) {
