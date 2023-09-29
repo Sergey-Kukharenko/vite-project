@@ -1,5 +1,5 @@
 <script setup>
-import AppBtn from './components/AppBtn.vue';
+import AppBtn from './components/btn/AppBtn.vue';
 </script>
 
 <template>
