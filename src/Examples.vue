@@ -1,13 +1,16 @@
 <script setup>
-import AppBtn from './components/btn/AppBtn.vue';
+import AppBannerCard from '@/components/banner/banner-card/AppBannerCard.vue';
+import AppBtn from '@/components/btn/AppBtn.vue';
 </script>
 
 <template>
+  <AppBannerCard />
   <div class="row-example">
     <app-btn tag="a">link</app-btn>
     <app-btn tag="a" href="/some" target="_blank">link</app-btn>
   </div>
   <div class="row-example">
+    <app-btn :processing="true">button</app-btn>
     <app-btn disabled>button</app-btn>
     <app-btn size="small">button</app-btn>
     <app-btn>button</app-btn>

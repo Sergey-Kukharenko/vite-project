@@ -3,13 +3,21 @@ import { computed } from 'vue';
 import { useMq } from 'vue3-mq';
 
 const mq = useMq();
-const getImg = computed(() => mq.current);
+
+const mapImagesDevices = {
+  xs: 'https://placehold.co/375X375.jpg',
+  sm: 'https://placehold.co/480X480.jpg',
+  md: 'https://placehold.co/768X768.jpg',
+  lg: 'https://placehold.co/1024X360.jpg',
+  xl: 'https://placehold.co/1280X402.jpg'
+};
+
+const getImg = computed(() => mapImagesDevices[mq.current]);
 </script>
 
 <template>
   <div class="banner-card">
-    <pre>{{ getImg }}</pre>
-    <img src="https://placehold.co/1222X403.jpg" class="banner-card__img" alt="" />
+    <img :src="getImg" class="banner-card__img" alt="" />
   </div>
 </template>
 

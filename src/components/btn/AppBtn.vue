@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from 'vue';
+import AppSpinner from '@/components/AppSpinner.vue';
 
 const props = defineProps({
   tag: {
@@ -28,6 +29,11 @@ const props = defineProps({
     default: false
   },
 
+  processing: {
+    type: Boolean,
+    default: false
+  },
+
   appearance: {
     type: String,
     default: 'yellow',
@@ -48,12 +54,13 @@ const props = defineProps({
 const classNames = computed(() => ({
   btn: true,
   [`btn--${props.appearance}`]: props.appearance,
-  [`btn--${props.size}`]: props.size
+  [`btn--${props.size}`]: props.size,
+  [`btn--processing`]: props.processing
 }));
 
 const componentProps = computed(() =>
   props.tag === 'button'
-    ? { disabled: props.disabled }
+    ? { disabled: props.disabled || props.processing }
     : {
         href: props.href,
         target: props.target
@@ -63,6 +70,7 @@ const componentProps = computed(() =>
 
 <template>
   <component :is="tag" :class="classNames" v-bind="componentProps">
+    <app-spinner v-if="processing" />
     <slot />
   </component>
 </template>
