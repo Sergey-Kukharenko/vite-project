@@ -1,76 +1,89 @@
+<script setup>
+import { computed } from 'vue';
+
+const props = defineProps({
+  color: {
+    type: String,
+    default: '#fff'
+  },
+
+  size: {
+    type: String,
+    default: '10px'
+  },
+
+  margin: {
+    type: String,
+    default: '2px'
+  }
+});
+
+const styles = computed(() => ({
+  style: {
+    backgroundColor: props.color,
+    width: props.size,
+    height: props.size,
+    margin: props.margin
+  }
+}));
+</script>
+
 <template>
   <div class="spinner">
-    <svg class="spinner__circle-svg" viewBox="25 25 50 50">
-      <circle
-        class="spinner__circle-stroke"
-        cx="50"
-        cy="50"
-        r="20"
-        fill="none"
-        stroke-width="2"
-        stroke-miterlimit="10"
-      />
-    </svg>
+    <div v-for="item in Array.from({ length: 3 })" :key="item" v-bind="styles" class="circle" />
   </div>
 </template>
 
 <style scoped lang="css">
 .spinner {
   position: absolute;
-  width: 30px;
-  height: 30px;
-  margin: auto;
 }
 
-.spinner:before {
-  content: '';
-  display: block;
-  padding-top: 100%;
+.circle {
+  display: inline-block;
+
+  width: 10px;
+  height: 10px;
+  margin: 2px;
+
+  background-color: var(--white);
+  border-radius: 100%;
+
+  -webkit-animation: circleStretchDelay 0.7s infinite linear;
+  animation: circleStretchDelay 0.7s infinite linear;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
-.spinner__circle-svg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform-origin: center center;
-
-  width: 100%;
-  height: 100%;
-  margin: auto;
-
-  animation: spinner-rotate 1.28973s linear infinite;
+.circle:nth-child(odd) {
+  animation-delay: 0s;
 }
 
-.spinner__circle-stroke {
-  stroke: var(--yellow);
-  stroke-dasharray: 1, 200;
-  stroke-dashoffset: 0;
-  stroke-linecap: round;
-  stroke-width: 5px;
-
-  animation: spinner-dash 2s ease-in-out infinite;
+.circle:nth-child(even) {
+  animation-delay: 0.35s;
 }
 
-@keyframes spinner-rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spinner-dash {
-  0% {
-    stroke-dasharray: 1, 200;
-    stroke-dashoffset: 0;
-  }
+@-webkit-keyframes circleStretchDelay {
   50% {
-    stroke-dasharray: 89, 200;
-    stroke-dashoffset: -35px;
+    transform: scale(0.75);
+    opacity: 0.2;
   }
+
   100% {
-    stroke-dasharray: 89, 200;
-    stroke-dashoffset: -124px;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes circleStretchDelay {
+  50% {
+    transform: scale(0.75);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 </style>

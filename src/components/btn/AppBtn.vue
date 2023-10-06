@@ -70,8 +70,10 @@ const componentProps = computed(() =>
 
 <template>
   <component :is="tag" :class="classNames" v-bind="componentProps">
+    <span class="btn__content">
+      <slot />
+    </span>
     <app-spinner v-if="processing" />
-    <slot />
   </component>
 </template>
 

@@ -1,9 +1,9 @@
 <script setup>
-import AppBannerCard from '@/components/banner/banner-card/AppBannerCard.vue';
+import AppBtn from '@/components/btn/AppBtn.vue';
 </script>
 
 <template>
   <div class="layout">
-    <app-banner-card />
+    <app-btn :processing="true"> Button</app-btn>
   </div>
 </template>

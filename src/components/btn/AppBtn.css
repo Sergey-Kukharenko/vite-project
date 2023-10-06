@@ -45,6 +45,10 @@
   background: var(--black);
 }
 
+.btn--processing:disabled .btn__content {
+  opacity: 0;
+}
+
 .btn--small {
   padding: 0 15px;
   font-size: 14px;
@@ -65,3 +69,7 @@
   line-height: 50px;
   border-radius: 25px;
 }
+
+
+
+
