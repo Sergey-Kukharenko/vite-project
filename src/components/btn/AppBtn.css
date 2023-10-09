@@ -14,8 +14,9 @@
   border: none;
   outline: none;
 
-  transition: color 0.25s,
-  background-color 0.25s;
+  transition:
+    color 0.25s,
+    background-color 0.25s;
 }
 
 .btn:disabled {
@@ -45,7 +46,7 @@
   background: var(--black);
 }
 
-.btn--processing:disabled .btn__content {
+.btn--processing:disabled span {
   opacity: 0;
 }
 

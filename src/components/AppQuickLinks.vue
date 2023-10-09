@@ -7,32 +7,28 @@ const quickLinks = ref(dataQuickLinks);
 
 <template>
   <div class="quick-links">
-    <a v-for="(item, idx) in quickLinks" :key="idx" class="quick-link">
-      <div class="quick-link__figure">
-        <img :src="item.img" class="quick-link__figure-img" alt="" />
+    <a v-for="(item, idx) in quickLinks" :key="idx" class="card">
+      <div class="figure">
+        <img :src="item.img" class="img" alt="" />
       </div>
-      <div class="quick-link__figcaption">{{ item.text }}</div>
+      <div class="figcaption">{{ item.text }}</div>
     </a>
   </div>
 </template>
 
 <style lang="css" scoped>
 .quick-links,
-.quick-link__figure {
+.figure {
   display: flex;
   justify-content: center;
 }
 
-.quick-links {
-  gap: 32px;
-}
-
-.quick-link {
+.card {
   max-width: 75px;
   text-align: center;
 }
 
-.quick-link__figure {
+.figure {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,16 +37,41 @@ const quickLinks = ref(dataQuickLinks);
   height: 72px;
 }
 
-.quick-link__figure-img {
+.figure-img {
   max-width: 100%;
 }
 
-.quick-link__figcaption {
+.figcaption {
   margin-top: 7px;
 
   font-size: 12px;
   font-weight: 400;
   line-height: normal;
   color: var(--black);
+}
+
+@media screen and (min-width: 768px) {
+  .quick-links {
+    gap: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .quick-links {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .quick-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .link {
+    flex: 0 0 auto;
+    margin: 0 12px;
+  }
 }
 </style>
