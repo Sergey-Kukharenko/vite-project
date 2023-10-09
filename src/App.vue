@@ -1,9 +1,9 @@
 <script setup>
-import AppBannerCard from '@/components/banner/banner-card/AppBannerCard.vue';
+import AppQuickLinks from '@/components/AppQuickLinks.vue';
 </script>
 
 <template>
   <div class="layout">
-    <app-banner-card />
+    <app-quick-links />
   </div>
 </template>

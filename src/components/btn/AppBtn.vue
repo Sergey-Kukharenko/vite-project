@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue';
-import AppSpinner from '@/components/AppSpinner.vue';
+import AppLoader from '@/components/AppLoader.vue';
 
 const props = defineProps({
   tag: {
@@ -73,7 +73,7 @@ const componentProps = computed(() =>
     <span class="btn__content">
       <slot />
     </span>
-    <app-spinner v-if="processing" />
+    <app-loader v-if="processing" />
   </component>
 </template>
 

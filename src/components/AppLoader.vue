@@ -29,13 +29,13 @@ const styles = computed(() => ({
 </script>
 
 <template>
-  <div class="spinner">
+  <div class="loader">
     <div v-for="item in Array.from({ length: 3 })" :key="item" v-bind="styles" class="circle" />
   </div>
 </template>
 
 <style scoped lang="css">
-.spinner {
+.loader {
   position: absolute;
 }
 
