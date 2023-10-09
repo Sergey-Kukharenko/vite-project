@@ -22,12 +22,14 @@ const getImg = computed(() => mapImagesDevices[mq.current]);
 </template>
 
 <style scoped lang="css">
-.banner-card {
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .banner-card {
     min-height: 403px;
   }
+}
 
-  @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
+  .banner-card {
     min-height: 384px;
   }
 }
