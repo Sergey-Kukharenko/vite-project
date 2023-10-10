@@ -77,4 +77,4 @@ const componentProps = computed(() =>
   </component>
 </template>
 
-<style lang="css" scoped src="AppBtn.css"></style>
+<style lang="css" scoped src="./AppBtn.css"></style>

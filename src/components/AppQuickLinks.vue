@@ -6,7 +6,7 @@ const quickLinks = ref(dataQuickLinks);
 </script>
 
 <template>
-  <div class="quick-links">
+  <div class="layout layout--dm quick-links">
     <a v-for="(item, idx) in quickLinks" :key="idx" class="card">
       <div class="figure">
         <img :src="item.img" class="img" alt="" />
@@ -53,6 +53,7 @@ const quickLinks = ref(dataQuickLinks);
 @media screen and (min-width: 768px) {
   .quick-links {
     gap: 32px;
+    margin: 50px auto;
   }
 }
 
@@ -61,6 +62,8 @@ const quickLinks = ref(dataQuickLinks);
     overflow-x: auto;
     flex-wrap: nowrap;
     justify-content: flex-start;
+
+    margin: 30px auto;
 
     -webkit-overflow-scrolling: touch;
   }

@@ -15,7 +15,9 @@ const { slide } = defineProps({
 
 <style scoped lang="css">
 img {
+  overflow: hidden;
   display: block;
   max-width: 100%;
+  border-radius: 10px;
 }
 </style>

@@ -39,4 +39,47 @@ const modules = [FreeMode, Pagination, Navigation, Mousewheel, Keyboard];
   </swiper>
 </template>
 
-<style lang="css"></style>
+<style lang="css">
+@media screen and (min-width: 768px) {
+  .custom .swiper {
+    margin: 38px 0 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .custom .swiper {
+    margin: 34px 0;
+    padding: 0 10px;
+  }
+}
+
+.custom .swiper-button-prev,
+.custom .swiper-button-next {
+  width: 46px;
+  height: 46px;
+  background: var(--white);
+  border-radius: 100%;
+}
+
+.custom .swiper-button-prev:after,
+.custom .swiper-button-next:after {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.custom .swiper-button-prev:after {
+  margin-left: -4px;
+}
+
+.custom .swiper-button-next:after {
+  margin-right: -4px;
+}
+
+@media screen and (max-width: 767px) {
+  .custom .swiper-button-prev,
+  .custom .swiper-button-next {
+    display: none;
+  }
+}
+</style>
