@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue';
-import AppLoader from '@/components/AppLoader.vue';
+import AppLoader from '@/components/shared/AppLoader.vue';
 
 const props = defineProps({
   tag: {
@@ -77,4 +77,4 @@ const componentProps = computed(() =>
   </component>
 </template>
 
-<style lang="css" scoped src="./AppBtn.css"></style>
+<style lang="css" scoped src="AppBtn.css"></style>

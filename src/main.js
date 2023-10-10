@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import { Vue3Mq } from 'vue3-mq';
-import AppIcon from './components/AppIcon.vue';
+import AppIcon from './components/shared/AppIcon.vue';
 
 import './assets/css/reset.css';
 import './assets/css/normalize.css';
