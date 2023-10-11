@@ -1,5 +1,5 @@
 <script setup>
-import AppCard from '@/components/app-card.vue';
+import AppCard from '@/components/card/AppCard.vue';
 
 const card = {
   img: 'https://placehold.co/307X230.jpg',
