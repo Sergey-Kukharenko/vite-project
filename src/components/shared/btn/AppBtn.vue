@@ -16,6 +16,11 @@ const props = defineProps({
     default: null
   },
 
+  cls: {
+    type: String,
+    default: null
+  },
+
   target: {
     type: String,
     default: null,
@@ -55,7 +60,8 @@ const classNames = computed(() => ({
   btn: true,
   [`btn--${props.appearance}`]: props.appearance,
   [`btn--${props.size}`]: props.size,
-  [`btn--processing`]: props.processing
+  [`btn--processing`]: props.processing,
+  [`btn--${props.cls}`]: props.cls
 }));
 
 const componentProps = computed(() =>

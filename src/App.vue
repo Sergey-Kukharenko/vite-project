@@ -1,21 +1,27 @@
 <script setup>
-import { ref } from 'vue';
+import AppCard from '@/components/app-card.vue';
 
-import dataSeries from '@/data/series.js';
-import dataBrands from '@/data/brands.js';
-
-import AppQuickLinks from '@/components/AppQuickLinks.vue';
-import AppSeries from '@/components/series/AppSeries.vue';
-import AppBrands from '@/components/brands/AppBrands.vue';
-
-const series = ref(dataSeries);
-const brands = ref(dataBrands);
+const card = {
+  img: 'https://placehold.co/307X230.jpg',
+  vendor_code: 'LEGO Star Wars™ 75350',
+  title: 'Шлем командира Коди',
+  price: {
+    current: '10 999 ₽',
+    old: '10 999 ₽'
+  },
+  view: {
+    icon: 'eye',
+    label: 'Просмотр'
+  },
+  availability: {
+    icon: 'map-point',
+    label: 'Проверить наличие'
+  }
+};
 </script>
 
 <template>
-  <div>
-    <app-quick-links />
-    <app-series :title="series.title" :slides="series.slides" />
-    <app-brands :title="brands.title" :slides="brands.slides" />
+  <div class="layout layout--dm">
+    <app-card :card="card" />
   </div>
 </template>
