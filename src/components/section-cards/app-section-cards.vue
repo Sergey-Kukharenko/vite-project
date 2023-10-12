@@ -23,9 +23,17 @@ const { title, list, button } = defineProps({
 <template>
   <div class="section-cards">
     <h1 v-if="title">{{ title }}</h1>
-    <app-list-cards :list="list" />
+    <app-list-cards :list="list" class="list" />
     <app-btn tag="a" :href="button.href">{{ button.label }}</app-btn>
   </div>
 </template>
 
-<style scoped lang="css"></style>
+<style scoped lang="css">
+.section-cards {
+  text-align: center;
+}
+
+.section-cards .list {
+  margin: 50px 0 30px;
+}
+</style>
