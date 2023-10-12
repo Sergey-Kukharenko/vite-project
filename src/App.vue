@@ -1,27 +1,14 @@
 <script setup>
-import AppCard from '@/components/card/AppCard.vue';
+import { ref } from 'vue';
 
-const card = {
-  img: 'https://placehold.co/307X230.jpg',
-  vendor_code: 'LEGO Star Wars™ 75350',
-  title: 'Шлем командира Коди',
-  price: {
-    current: '10 999 ₽',
-    old: '10 999 ₽'
-  },
-  view: {
-    icon: 'eye',
-    label: 'Просмотр'
-  },
-  availability: {
-    icon: 'map-point',
-    label: 'Проверить наличие'
-  }
-};
+import AppSectionCards from '@/components/section-cards/app-section-cards.vue';
+import dataListCards from '@/data/list-cards.js';
+
+const listCards = ref(dataListCards);
 </script>
 
 <template>
   <div class="layout layout--dm">
-    <app-card :card="card" />
+    <app-section-cards :title="listCards.title" :list="listCards.list" :button="listCards.button" />
   </div>
 </template>
