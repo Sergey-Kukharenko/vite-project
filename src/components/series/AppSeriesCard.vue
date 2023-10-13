@@ -13,7 +13,7 @@ const { slide } = defineProps({
   </a>
 </template>
 
-<style scoped lang="css">
+<style lang="scss" scoped>
 img {
   overflow: hidden;
   display: block;

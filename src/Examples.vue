@@ -62,3 +62,8 @@ import AppBtn from '@/components/shared/btn/AppBtn.vue';
     <a href="#">This is an example text.</a>
   </div>
 </template>
+<style lang="scss">
+body {
+  background: #fff;
+}
+</style>

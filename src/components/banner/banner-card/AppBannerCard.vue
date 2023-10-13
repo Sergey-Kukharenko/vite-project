@@ -17,25 +17,23 @@ const getImg = computed(() => mapImagesDevices[mq.current]);
 
 <template>
   <div class="banner-card">
-    <img :src="getImg" class="banner-card__img" alt="" />
+    <img :src="getImg" alt="" />
   </div>
 </template>
 
-<style scoped lang="css">
-@media screen and (min-width: 768px) {
-  .banner-card {
+<style lang="scss" scoped>
+.banner-card {
+  @include gt-sm {
     min-height: 403px;
   }
-}
 
-@media screen and (max-width: 767px) {
-  .banner-card {
+  @include lt-md {
     min-height: 384px;
   }
-}
 
-.banner-card__img {
-  display: block;
-  max-width: 100%;
+  & img {
+    display: block;
+    max-width: 100%;
+  }
 }
 </style>

@@ -28,12 +28,12 @@ const { title, list, button } = defineProps({
   </div>
 </template>
 
-<style scoped lang="css">
+<style lang="scss" scoped>
 .section-cards {
   text-align: center;
-}
 
-.section-cards .list {
-  margin: 50px 0 30px;
+  & .list {
+    margin: 50px 0 30px;
+  }
 }
 </style>

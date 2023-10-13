@@ -8,5 +8,12 @@ export default defineConfig({
   plugins: [vue(), svgLoader()],
   resolve: {
     alias: [{ find: '@', replacement: resolve(__dirname, './src') }]
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/assets/scss/index.scss";`
+      }
+    }
   }
 });

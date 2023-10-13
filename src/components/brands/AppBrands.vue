@@ -44,7 +44,7 @@ const options = {
   </section>
 </template>
 
-<style scoped lang="css">
+<style lang="scss" scoped>
 .brands {
   text-align: center;
 }

@@ -17,7 +17,7 @@ const { list } = defineProps({
   </div>
 </template>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 .list-cards {
   display: flex;
   flex-wrap: wrap;
@@ -25,9 +25,9 @@ const { list } = defineProps({
   column-gap: 24px;
   align-items: center;
   justify-content: space-between;
-}
 
-.item {
-  flex: 1 1 23%;
+  & .item {
+    flex: 1 1 23%;
+  }
 }
 </style>

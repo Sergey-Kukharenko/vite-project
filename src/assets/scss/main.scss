@@ -1,0 +1,177 @@
+.layout {
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  @include gt-sm {
+    max-width: 1272px;
+  }
+
+  &--desktop {
+    @include gt-sm {
+      padding: 0 24px;
+    }
+  }
+
+  &--mobile {
+    @include lt-md {
+      padding: 0 10px;
+    }
+  }
+}
+
+.vertical-space {
+  @include gt-sm {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  @include lt-md {
+    margin: 30px 0;
+  }
+}
+
+h1, h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: bold;
+}
+
+h1 {
+  @include gt-sm {
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  @include lt-md {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+h2 {
+  @include gt-md {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  @include md {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  @include lt-md {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+h3 {
+  @include gt-sm {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  @include lt-md {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+h4 {
+  @include gt-md {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  @include md {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  @include lt-md {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
+.text-xxl {
+  line-height: 30px;
+
+  @include gt-md {
+    font-size: 22px;
+  }
+
+  @include lt-lg {
+    font-size: 21px;
+  }
+}
+
+.text-xl {
+  font-size: 20px;
+
+  @include gt-md {
+    line-height: 32px;
+  }
+
+  @include lt-lg {
+    line-height: 30px;
+  }
+}
+
+.text-lg {
+  @include gt-md {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  @include lt-lg {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.text-md, a,
+p {
+  @include gt-md {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @include lt-lg {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+.text-sm {
+  @include gt-md {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @include lt-lg {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.text-xs {
+  @include gt-md {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  @include lt-lg {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.text-error {
+  color: var(--red);
+}
+
+.text-grey {
+  color: var(--grey-dark);
+}

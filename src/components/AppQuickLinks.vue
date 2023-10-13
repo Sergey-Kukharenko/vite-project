@@ -6,7 +6,7 @@ const quickLinks = ref(dataQuickLinks);
 </script>
 
 <template>
-  <div class="layout layout--dm quick-links">
+  <div class="layout layout--desktop layout--mobile quick-links">
     <a v-for="(item, idx) in quickLinks" :key="idx" class="card">
       <div class="figure">
         <img :src="item.img" class="img" alt="" />
@@ -16,11 +16,34 @@ const quickLinks = ref(dataQuickLinks);
   </div>
 </template>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 .quick-links,
 .figure {
   display: flex;
   justify-content: center;
+}
+
+.quick-links {
+  @include gt-sm {
+    gap: 32px;
+    margin: 50px auto;
+  }
+
+  @include lt-md {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    margin: 30px auto;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &::-webkit-scrollbar {
+    @include lt-md {
+      display: none;
+    }
+  }
 }
 
 .card {
@@ -50,29 +73,8 @@ const quickLinks = ref(dataQuickLinks);
   color: var(--black);
 }
 
-@media screen and (min-width: 768px) {
-  .quick-links {
-    gap: 32px;
-    margin: 50px auto;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .quick-links {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-
-    margin: 30px auto;
-
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .quick-links::-webkit-scrollbar {
-    display: none;
-  }
-
-  .link {
+.link {
+  @include lt-md {
     flex: 0 0 auto;
     margin: 0 12px;
   }

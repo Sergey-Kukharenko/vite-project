@@ -36,4 +36,4 @@ const { card } = defineProps({
   </div>
 </template>
 
-<style lang="css" scoped src="./AppCard.css"></style>
+<style lang="scss" src="./AppCard.scss" scoped></style>

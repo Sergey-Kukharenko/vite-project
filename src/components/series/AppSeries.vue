@@ -42,7 +42,7 @@ const options = {
   </section>
 </template>
 
-<style scoped lang="css">
+<style lang="scss" scoped>
 .series {
   text-align: center;
 }

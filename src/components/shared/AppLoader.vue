@@ -34,7 +34,7 @@ const styles = computed(() => ({
   </div>
 </template>
 
-<style scoped lang="css">
+<style lang="scss" scoped>
 .loader {
   position: absolute;
 }
@@ -53,14 +53,14 @@ const styles = computed(() => ({
   animation: circleStretchDelay 0.7s infinite linear;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-}
 
-.circle:nth-child(odd) {
-  animation-delay: 0s;
-}
+  &:nth-child(odd) {
+    animation-delay: 0s;
+  }
 
-.circle:nth-child(even) {
-  animation-delay: 0.35s;
+  &:nth-child(even) {
+    animation-delay: 0.35s;
+  }
 }
 
 @-webkit-keyframes circleStretchDelay {

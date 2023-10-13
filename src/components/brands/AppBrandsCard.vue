@@ -20,7 +20,7 @@ const getDevice = computed(() => (mq.current === 'xs' || mq.current === 'sm' ? '
   </a>
 </template>
 
-<style scoped lang="css">
+<style lang="scss" scoped>
 .brands-card {
   overflow: hidden;
   display: block;
@@ -29,10 +29,10 @@ const getDevice = computed(() => (mq.current === 'xs' || mq.current === 'sm' ? '
 
   border: 1px solid #dcdcdc;
   border-radius: 10px;
-}
 
-img {
-  display: block;
-  max-width: 100%;
+  & img {
+    display: block;
+    max-width: 100%;
+  }
 }
 </style>
