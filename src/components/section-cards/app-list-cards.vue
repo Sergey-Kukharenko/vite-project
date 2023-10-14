@@ -20,14 +20,35 @@ const { list } = defineProps({
 <style lang="scss" scoped>
 .list-cards {
   display: flex;
-  flex-wrap: wrap;
-  row-gap: 30px;
-  column-gap: 24px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+
+  @include gt-sm {
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 24px;
+  }
+
+  @include lt-md {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    column-gap: 10px;
+    justify-content: flex-start;
+
+    margin: 30px auto;
+    padding: 0 10px;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &::-webkit-scrollbar {
+    @include lt-md {
+      display: none;
+    }
+  }
 
   & .item {
-    flex: 1 1 23%;
+    flex: 0 0 288px;
   }
 }
 </style>

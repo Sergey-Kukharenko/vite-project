@@ -47,6 +47,12 @@
 }
 
 .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+
   color: var(--black);
 
   @include gt-sm {
@@ -60,12 +66,11 @@
 }
 
 .price {
-  font-weight: 700;
+  font-family: var(--circle-bold);
   color: var(--black);
 
   @include gt-sm {
     font-size: 22px;
-    font-weight: 700;
     line-height: 30px;
   }
 
@@ -101,9 +106,6 @@
 }
 
 .group-text {
-  @include lt-md {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-  }
+  display: flex;
+  flex-direction: column;
 }

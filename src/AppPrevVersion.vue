@@ -21,7 +21,7 @@ const listCards = ref(dataListCards);
     <app-quick-links />
     <app-series :title="series.title" :slides="series.slides" />
     <app-brands :title="brands.title" :slides="brands.slides" />
-    <div class="layout layout--desktop layout--mobile">
+    <div class="layout layout--desktop">
       <app-section-cards :title="listCards.title" :list="listCards.list" :button="listCards.button" />
     </div>
   </div>
