@@ -1,5 +1,5 @@
 <script setup>
-import AppBannerCard from '@/components/banner/banner-card/AppBannerCard.vue';
+import AppBannerCard from '@/components/banner/AppBannerCard.vue';
 import AppBtn from '@/components/shared/btn/AppBtn.vue';
 </script>
 
