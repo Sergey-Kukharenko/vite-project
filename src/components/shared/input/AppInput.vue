@@ -64,8 +64,15 @@ const value = ref(props.value);
 
 <style scoped lang="scss">
 .input {
+  @include gt-sm {
+    width: 290px;
+  }
+
+  @include lt-md {
+    width: 100%;
+  }
+
   box-sizing: border-box;
-  width: 290px;
   padding: 10px;
 
   font-size: 16px;

@@ -3,9 +3,7 @@ import AppSubscribe from '@/components/subscribe/AppSubscribe.vue';
 </script>
 
 <template>
-  <div class="layout layout--desktop layout--mobile">
-    <app-subscribe />
-  </div>
+  <app-subscribe />
 </template>
 
 <style lang="scss">

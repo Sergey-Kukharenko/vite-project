@@ -1,0 +1,60 @@
+.subscribe {
+  @include gt-sm {
+    padding: 34px 78px 48px;
+    border-radius: 12px;
+  }
+
+  @include lt-md {
+    padding: 24px 18px;
+  }
+
+  background: var(--black);
+}
+
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  & .btn {
+    @include lt-md {
+      order: 2;
+    }
+  }
+}
+
+.title {
+  @include gt-sm {
+    max-width: 293px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  @include lt-md {
+    max-width: 196px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.description {
+  @include lt-md {
+    order: 1;
+  }
+
+  width: 100%;
+  font-size: 12px;
+  line-height: normal;
+  color: var(--white);
+
+  & a {
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-decoration: underline;
+  }
+}
