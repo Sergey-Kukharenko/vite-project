@@ -2,18 +2,18 @@
 import { computed } from 'vue';
 
 const props = defineProps({
+  modelValue: {
+    type: [String, Number],
+    required: true,
+    default: ''
+  },
+
   type: {
     type: String,
     default: 'text',
     validator(value) {
       return ['text', 'email'].includes(value);
     }
-  },
-
-  modelValue: {
-    type: [String, Number],
-    required: true,
-    default: ''
   },
 
   placeholder: {
@@ -51,11 +51,11 @@ const classNames = computed(() => ({
 
 <template>
   <input
+    :value="modelValue"
     :type="props.type"
     :placeholder="props.placeholder"
     :disabled="props.disabled"
     :class="classNames"
-    :value="modelValue"
     @input="$emit('update:modelValue', $event.target.value)"
   />
 </template>
