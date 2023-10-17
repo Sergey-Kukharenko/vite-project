@@ -14,7 +14,7 @@ const getDevice = computed(() => (mq.current === 'xs' || mq.current === 'sm' ? '
 </script>
 
 <template>
-  <div class="banner-card">
+  <div class="layout layout--desktop banner-card">
     <img :src="banner.img[getDevice]" alt="" />
   </div>
 </template>

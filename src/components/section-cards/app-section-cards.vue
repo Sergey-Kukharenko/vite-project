@@ -21,7 +21,7 @@ const { title, list, button } = defineProps({
 </script>
 
 <template>
-  <div class="section-cards">
+  <div class="layout layout--desktop section-cards">
     <h1 v-if="title">{{ title }}</h1>
     <app-list-cards :list="list" class="list" />
     <app-btn tag="a" :href="button.href">{{ button.label }}</app-btn>

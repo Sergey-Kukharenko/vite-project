@@ -49,3 +49,10 @@ a {
 .row-example > * {
   margin: 0.2em;
 }
+
+.description {
+  margin: 20px auto;
+  font-size: 15px;
+  line-height: 21px;
+  white-space: pre-wrap;
+}

@@ -13,6 +13,7 @@ import AppSelections from '@/components/selections/AppSelections.vue';
 import dataSelections from '@/data/selections.js';
 import AppBanner from '@/components/banner/AppBanner.vue';
 import dataBanner from '@/data/banner.js';
+import AppConstructionsToys from '@/components/сonstructions-toys/AppConstructionsToys.vue';
 
 const series = ref(dataSeries);
 const brands = ref(dataBrands);
@@ -22,18 +23,13 @@ const banner = ref(dataBanner);
 </script>
 
 <template>
-  <div>
-    <app-quick-links />
-    <app-series :title="series.title" :slides="series.slides" />
-    <app-brands :title="brands.title" :slides="brands.slides" />
-    <div class="layout layout--desktop">
-      <app-section-cards :title="listCards.title" :list="listCards.list" :button="listCards.button" />
-    </div>
-    <app-selections :title="selections.title" :slides="selections.slides" />
-    <div class="layout layout--desktop">
-      <app-banner :banner="banner" />
-    </div>
-  </div>
+  <app-quick-links />
+  <app-series :title="series.title" :slides="series.slides" />
+  <app-brands :title="brands.title" :slides="brands.slides" />
+  <app-section-cards :title="listCards.title" :list="listCards.list" :button="listCards.button" />
+  <app-selections :title="selections.title" :slides="selections.slides" />
+  <app-banner :banner="banner" />
+  <app-constructions-toys />
 </template>
 
 <style lang="scss">
