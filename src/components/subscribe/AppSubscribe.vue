@@ -12,7 +12,7 @@ const value = ref('');
     <div class="title">Подписывайтесь на рассылку</div>
 
     <div class="subscribe-form">
-      <app-input v-model:value="value" placeholder="E-mail" />
+      <app-input v-model="value" placeholder="E-mail" />
       <app-btn font-size="small" cls="subscribe">Подписаться</app-btn>
       <div class="description">
         Нажимая кнопку «Подписаться», вы соглашаетесь с <a href="">политикой конфиденциальности</a> и
@@ -20,6 +20,7 @@ const value = ref('');
       </div>
     </div>
   </div>
+  {{ value }}
 </template>
 
 <style lang="scss" scoped src="./AppSubscribe.scss"></style>

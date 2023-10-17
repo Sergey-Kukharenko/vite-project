@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 
 const props = defineProps({
   type: {
@@ -10,7 +10,7 @@ const props = defineProps({
     }
   },
 
-  value: {
+  modelValue: {
     type: [String, Number],
     required: true,
     default: ''
@@ -40,25 +40,23 @@ const props = defineProps({
   }
 });
 
-defineEmits(['update:value']);
+defineEmits(['update:modelValue']);
 
 const classNames = computed(() => ({
   input: true,
   [`input--${props.appearance}`]: props.appearance,
   [`input--${props.cls}`]: props.cls
 }));
-
-const value = ref(props.value);
 </script>
 
 <template>
   <input
-    v-model="value"
     :type="props.type"
     :placeholder="props.placeholder"
     :disabled="props.disabled"
     :class="classNames"
-    @input="$emit('update:value', value)"
+    :value="modelValue"
+    @input="$emit('update:modelValue', $event.target.value)"
   />
 </template>
 
