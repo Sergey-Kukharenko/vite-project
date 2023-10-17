@@ -33,8 +33,6 @@
 }
 
 .vendor-code {
-  line-height: 20px;
-  color: #828282;
 
   @include gt-sm {
     font-size: 14px;
@@ -44,16 +42,12 @@
   @include lt-md {
     font-size: 11px;
   }
+
+  line-height: 20px;
+  color: #828282;
 }
 
 .title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 44px;
-
-  color: var(--black);
 
   @include gt-sm {
     font-size: 16px;
@@ -63,11 +57,17 @@
   @include lt-md {
     font-size: 13px;
   }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+
+  color: var(--black);
 }
 
 .price {
-  font-family: var(--circle-bold);
-  color: var(--black);
 
   @include gt-sm {
     font-size: 22px;
@@ -77,6 +77,9 @@
   @include lt-md {
     font-size: 20px;
   }
+
+  font-family: var(--circle-bold);
+  color: var(--black);
 }
 
 .controls,
@@ -92,11 +95,12 @@
 }
 
 .controls {
-  justify-content: space-between;
 
   @include lt-md {
     display: none;
   }
+
+  justify-content: space-between;
 
   &__label {
     font-size: 13px;

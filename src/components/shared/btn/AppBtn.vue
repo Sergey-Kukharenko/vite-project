@@ -53,6 +53,14 @@ const props = defineProps({
     validator(value) {
       return ['small', 'medium', 'large'].includes(value);
     }
+  },
+
+  fontSize: {
+    type: String,
+    default: null,
+    validator(value) {
+      return ['small', 'medium', 'large'].includes(value);
+    }
   }
 });
 
@@ -60,6 +68,7 @@ const classNames = computed(() => ({
   btn: true,
   [`btn--${props.appearance}`]: props.appearance,
   [`btn--${props.size}`]: props.size,
+  [`btn--font-size-${props.fontSize}`]: props.fontSize,
   [`btn--processing`]: props.processing,
   [`btn--${props.cls}`]: props.cls
 }));

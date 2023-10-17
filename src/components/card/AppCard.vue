@@ -21,7 +21,7 @@ const { card } = defineProps({
         <div class="title">{{ card.title }}</div>
         <div class="price">{{ card.price.current }}</div>
       </div>
-      <app-btn class="card__btn" cls="card">Купить</app-btn>
+      <app-btn class="card__btn" font-size="small">Купить</app-btn>
       <div class="controls">
         <div class="view">
           <app-icon :name="card.view.icon" />

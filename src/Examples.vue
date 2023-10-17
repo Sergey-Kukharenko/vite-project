@@ -1,10 +1,19 @@
 <script setup>
 import AppBannerCard from '@/components/banner/AppBannerCard.vue';
 import AppBtn from '@/components/shared/btn/AppBtn.vue';
+import AppInput from '@/components/shared/input/AppInput.vue';
+import { ref } from 'vue';
+
+const value = ref('');
 </script>
 
 <template>
   <AppBannerCard />
+  <div class="row-example">
+    <app-input v-model:value="value" placeholder="Label" />
+    <app-input v-model:value="value" placeholder="Label" disabled />
+    <app-input v-model:value="value" placeholder="Label" appearance="white" />
+  </div>
   <div class="row-example">
     <app-btn tag="a">link</app-btn>
     <app-btn tag="a" href="/some" target="_blank">link</app-btn>
