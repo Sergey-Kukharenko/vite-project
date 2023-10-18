@@ -1,60 +1,19 @@
 <script setup>
-import AppBtn from '@/components/shared/btn/AppBtn.vue';
-import AppInput from '@/components/shared/input/AppInput.vue';
-import { computed, reactive } from 'vue';
-import { useVuelidate } from '@vuelidate/core';
-import { required, email, helpers } from '@vuelidate/validators';
+import AppSubscribeForm from '@/components/subscribe/subscribe-form/AppSubscribeForm.vue';
+import { useMq } from 'vue3-mq';
+import { computed } from 'vue';
 
-const state = reactive({
-  contact: {
-    email: ''
-  }
-});
+const mq = useMq();
 
-const rules = {
-  contact: {
-    email: {
-      required: helpers.withMessage('This field cannot be empty', required),
-      email: helpers.withMessage('Email Is Not Valid', email)
-    }
-  }
-};
-
-const v$ = useVuelidate(rules, state);
-
-const isError = computed(() => {
-  return !!v$.value.contact.email.$errors.length;
-});
-
-const onSubmit = () => {
-  v$.value.$touch();
-
-  if (v$.value.$error) return;
-
-  // Submit form here
-  console.log(state.contact.email);
-  state.contact.email = '';
-  v$.value.$reset();
-};
+const getDevice = computed(() => (mq.current === 'xs' || mq.current === 'sm' ? 'mobile' : 'desktop'));
 </script>
 
 <template>
   <div class="layout layout--desktop subscribe">
     <div class="title">Подписывайтесь на рассылку</div>
-
-    <form class="subscribe-form" @submit.prevent="onSubmit">
-      <app-input
-        v-model="state.contact.email"
-        placeholder="E-mail"
-        appearance="white"
-        :errors="v$.contact.email.$errors"
-      />
-      <app-btn font-size="small" cls="subscribe" :disabled="isError">Подписаться</app-btn>
-      <div class="description">
-        Нажимая кнопку «Подписаться», вы соглашаетесь с <a href="">политикой конфиденциальности</a> и
-        <a href="">условиями оферты</a>
-      </div>
-    </form>
+    <app-subscribe-form />
+    <img :src="`/images/subscribe/${getDevice}/envelope.png`" alt="" class="img envelope" />
+    <img :src="`/images/subscribe/${getDevice}/bird.png`" alt="" class="img bird" />
   </div>
 </template>
 

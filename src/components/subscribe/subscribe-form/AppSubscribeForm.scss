@@ -1,0 +1,33 @@
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+
+  & .btn {
+    
+    @include lt-md {
+      order: 2;
+    }
+
+    min-width: 145px;
+  }
+}
+
+.description {
+  @include lt-md {
+    order: 1;
+  }
+
+  width: 100%;
+  font-size: 12px;
+  line-height: normal;
+  color: var(--white);
+
+  & a {
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-decoration: underline;
+  }
+}

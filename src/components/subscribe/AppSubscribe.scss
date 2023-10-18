@@ -1,28 +1,22 @@
 .subscribe {
+
   @include gt-sm {
-    padding: 34px 78px 48px;
+    padding: 33px 78px 47px;
     border-radius: 12px;
   }
 
   @include lt-md {
+    min-height: 378px;
     padding: 24px 18px;
   }
 
+  position: relative;
+  margin-top: 78px;
   background: var(--black);
-}
 
-.subscribe-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: flex-start;
-
-  & .btn {
-    @include lt-md {
-      order: 2;
-    }
-
-    min-width: 145px;
+  & .subscribe-form {
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -44,20 +38,34 @@
   color: var(--white);
 }
 
-.description {
-  @include lt-md {
-    order: 1;
+img {
+  position: absolute;
+  z-index: 1;
+
+  &.envelope {
+
+    @include gt-sm {
+      top: 0;
+    }
+
+    @include lt-md {
+      top: -30px;
+    }
+
+    right: 0;
   }
 
-  width: 100%;
-  font-size: 12px;
-  line-height: normal;
-  color: var(--white);
+  &.bird {
+    @include gt-sm {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
 
-  & a {
-    font-size: inherit;
-    line-height: inherit;
-    color: inherit;
-    text-decoration: underline;
+    @include lt-md {
+      right: 0;
+      bottom: -94px;
+    }
   }
 }

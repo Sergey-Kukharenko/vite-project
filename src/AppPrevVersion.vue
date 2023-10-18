@@ -14,6 +14,7 @@ import dataSelections from '@/data/selections.js';
 import AppBanner from '@/components/banner/AppBanner.vue';
 import dataBanner from '@/data/banner.js';
 import AppConstructionsToys from '@/components/сonstructions-toys/AppConstructionsToys.vue';
+import AppSubscribe from '@/components/subscribe/AppSubscribe.vue';
 
 const series = ref(dataSeries);
 const brands = ref(dataBrands);
@@ -30,4 +31,5 @@ const banner = ref(dataBanner);
   <app-selections :title="selections.title" :slides="selections.slides" />
   <app-banner :banner="banner" />
   <app-constructions-toys />
+  <app-subscribe />
 </template>
