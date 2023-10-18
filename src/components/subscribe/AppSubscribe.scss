@@ -1,23 +1,26 @@
 .subscribe {
-
+  
   @include gt-sm {
+    margin: 78px auto 90px;
     padding: 33px 78px 47px;
     border-radius: 12px;
   }
 
   @include lt-md {
     min-height: 378px;
+    margin: 65px auto 60px;
     padding: 24px 18px;
   }
 
   position: relative;
-  margin-top: 78px;
   background: var(--black);
 
   & .subscribe-form {
     position: relative;
     z-index: 2;
   }
+
+
 }
 
 .title {
@@ -43,7 +46,6 @@ img {
   z-index: 1;
 
   &.envelope {
-
     @include gt-sm {
       top: 0;
     }
