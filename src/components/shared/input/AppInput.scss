@@ -1,0 +1,57 @@
+.app-input {
+  @include gt-sm {
+    width: 290px;
+  }
+
+  @include lt-md {
+    width: 100%;
+  }
+
+  & input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--black);
+
+    border: 1px solid transparent;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25) inset;
+
+    &:disabled {
+      color: var(--grey);
+      background: #f1f1f1;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25) inset;
+
+      &::placeholder {
+        color: inherit;
+      }
+    }
+  }
+
+  &--grey {
+    & input {
+      background: var(--grey-extralight);
+    }
+  }
+
+  &--white {
+    & input {
+      background: var(--white);
+      box-shadow: none;
+    }
+  }
+
+  &--error {
+    & input {
+      border: 1px solid red;
+    }
+  }
+}
+
+.errors {
+  color: red;
+}

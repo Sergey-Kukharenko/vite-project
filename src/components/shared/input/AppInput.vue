@@ -37,67 +37,37 @@ const props = defineProps({
   cls: {
     type: String,
     default: null
+  },
+
+  errors: {
+    type: Array,
+    default: () => []
   }
 });
 
 defineEmits(['update:modelValue']);
 
 const classNames = computed(() => ({
-  input: true,
-  [`input--${props.appearance}`]: props.appearance,
-  [`input--${props.cls}`]: props.cls
+  'app-input': true,
+  [`app-input--${props.appearance}`]: props.appearance,
+  [`app-input--${props.cls}`]: props.cls,
+  [`app-input--error`]: props.errors.length
 }));
 </script>
 
 <template>
-  <input
-    :value="modelValue"
-    :type="props.type"
-    :placeholder="props.placeholder"
-    :disabled="props.disabled"
-    :class="classNames"
-    @input="$emit('update:modelValue', $event.target.value)"
-  />
+  <div :class="classNames">
+    <input
+      :value="modelValue"
+      :type="props.type"
+      :placeholder="props.placeholder"
+      :disabled="props.disabled"
+      @input="$emit('update:modelValue', $event.target.value)"
+    />
+    <div v-for="error of errors" :key="error.$uid" class="errors">
+      <div class="error-msg">{{ error.$message }}</div>
+    </div>
+  </div>
 </template>
 
-<style scoped lang="scss">
-.input {
-  @include gt-sm {
-    width: 290px;
-  }
-
-  @include lt-md {
-    width: 100%;
-  }
-
-  box-sizing: border-box;
-  padding: 10px;
-
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  color: var(--black);
-
-  background: var(--grey-extralight);
-  border-radius: 2px;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25) inset;
-
-  &:disabled {
-    color: var(--grey);
-    background: #f1f1f1;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25) inset;
-
-    &::placeholder {
-      color: inherit;
-    }
-  }
-
-  &--grey {
-    background: var(--grey-extralight);
-  }
-
-  &--white {
-    background: var(--white);
-  }
-}
-</style>
+<style scoped lang="scss" src="./AppInput.scss" />

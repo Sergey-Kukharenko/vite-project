@@ -92,4 +92,4 @@ const componentProps = computed(() =>
   </component>
 </template>
 
-<style lang="scss" scoped src="./AppBtn.scss"></style>
+<style lang="scss" scoped src="./AppBtn.scss" />
