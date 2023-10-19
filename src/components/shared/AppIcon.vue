@@ -13,5 +13,5 @@ const icon = defineAsyncComponent(() => import(`/src/assets/icons/${props.name}.
 </script>
 
 <template>
-  <component :is="icon" class="fill-current" />
+  <component :is="icon" class="icon" />
 </template>

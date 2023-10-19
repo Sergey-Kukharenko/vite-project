@@ -1,9 +1,9 @@
 <script setup>
-import AppSubscribe from '@/components/subscribe/AppSubscribe.vue';
+import AppFooter from '@/components/footer/AppFooter.vue';
 </script>
 
 <template>
-  <app-subscribe />
+  <app-footer />
 </template>
 
 <style lang="scss">
