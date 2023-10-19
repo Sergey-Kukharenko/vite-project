@@ -20,6 +20,13 @@
   transition: color 0.25s,
   background-color 0.25s;
 
+  & .content {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+
   &:disabled {
     cursor: none;
     color: var(--grey);
@@ -38,6 +45,10 @@
     background: var(--yellow);
   }
 
+  &--grey {
+    background: var(--grey-light);
+  }
+
   &--ghost {
     background: none;
     border: 1px solid var(--black);
@@ -49,7 +60,7 @@
       opacity: 0.4;
       background: var(--black);
 
-      & span {
+      & .content {
         opacity: 0;
       }
     }
@@ -85,6 +96,24 @@
       &:hover {
         color: var(--black);
         background: var(--white);
+      }
+    }
+  }
+
+  &--phone {
+    min-width: initial;
+    padding: 7px 16px;
+
+    font-size: 12px;
+    line-height: 14px;
+
+    transition: none;
+
+    &:not(:disabled) {
+      &:hover {
+        &:deep(.icon) {
+          fill: #fff;
+        }
       }
     }
   }

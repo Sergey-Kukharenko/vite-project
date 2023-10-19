@@ -43,7 +43,7 @@ const props = defineProps({
     type: String,
     default: 'yellow',
     validator(value) {
-      return ['yellow', 'ghost'].includes(value);
+      return ['yellow', 'ghost', 'grey'].includes(value);
     }
   },
 
@@ -85,7 +85,7 @@ const componentProps = computed(() =>
 
 <template>
   <component :is="tag" :class="classNames" v-bind="componentProps">
-    <span>
+    <span class="content">
       <slot />
     </span>
     <app-loader v-if="processing" />

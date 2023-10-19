@@ -1,4 +1,54 @@
 export default {
+  button: {
+    icon: 'phone',
+    phone: '8 (495) 981-31-10',
+    href: 'tel:84959813110'
+  },
+  time: '9:00 — 22:00, ежедневно\n' + '(время московское)',
+  media: [
+    {
+      title: 'Написать нам',
+      list: [
+        {
+          href: false,
+          icon: 'telegram',
+          colored: true
+        },
+        {
+          href: false,
+          icon: 'whatsapp',
+          colored: true
+        }
+      ]
+    },
+
+    {
+      title: 'Мы в соцсетях',
+      list: [
+        {
+          href: false,
+          icon: 'telegram'
+        },
+        {
+          href: false,
+          icon: 'vk'
+        },
+        {
+          href: false,
+          icon: 'youtube'
+        },
+        {
+          href: false,
+          icon: 'dzen'
+        }
+      ]
+    }
+  ],
+  // social: [
+  //   {
+  //     title: 'Мы в соцсетях'
+  //   }
+  // ],
   sections: {
     brands: {
       title: 'Бренды конструкторов',
@@ -20,7 +70,6 @@ export default {
     series: {
       title: 'Серии конструкторов',
       list: [
-        { href: false, name: 'Серии конструкторов' },
         { href: false, name: 'Коллекционные наборы' },
         { href: false, name: 'Уникальные наборы' },
         { href: false, name: '4+' },

@@ -1,8 +1,9 @@
 <script setup>
 import { ref } from 'vue';
-import AppFooterSection from '@/components/footer/AppFooterSection.vue';
+import AppFooterSection from '@/components/footer/footer-section/AppFooterSection.vue';
 
 import dataFooter from '@/data/footer.js';
+import AppFooterTop from '@/components/footer/AppFooterTop.vue';
 
 const footer = ref(dataFooter);
 </script>
@@ -10,7 +11,8 @@ const footer = ref(dataFooter);
 <template>
   <div class="footer">
     <div class="layout layout--desktop layout--mobile">
-      <div class="group-lists">
+      <app-footer-top :button="footer.button" :time="footer.time" :media="footer.media" />
+      <div class="footer-sections">
         <app-footer-section v-for="section in footer.sections" :key="section" :section="section" />
       </div>
     </div>
