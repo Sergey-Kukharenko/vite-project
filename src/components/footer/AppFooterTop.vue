@@ -49,8 +49,8 @@ const { button, time, media } = props;
   outline: 1px solid #000;
 
   &--phone {
-    width: 40.4444%;
     gap: 10px;
+    width: 40.4444%;
   }
 
   &--social {
