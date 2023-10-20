@@ -17,5 +17,6 @@ const icon = defineAsyncComponent(() => import(`/src/assets/icons/${props.name}.
 <style scoped lang="scss">
 .icon {
   display: block;
+  height: auto;
 }
 </style>

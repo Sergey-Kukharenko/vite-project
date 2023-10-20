@@ -30,5 +30,6 @@ const { copyright, logo } = ref(dataFooter).value;
 
 .icon {
   width: 150px;
+  height: auto;
 }
 </style>
