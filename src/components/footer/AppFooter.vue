@@ -1,20 +1,15 @@
 <script setup>
-import { ref } from 'vue';
-import AppFooterSection from '@/components/footer/footer-section/AppFooterSection.vue';
-
-import dataFooter from '@/data/footer.js';
 import AppFooterTop from '@/components/footer/AppFooterTop.vue';
-
-const footer = ref(dataFooter);
+import AppFooterBottom from '@/components/footer/AppFooterBottom.vue';
+import AppFooterSections from '@/components/footer/footer-sections/AppFooterSections.vue';
 </script>
 
 <template>
   <div class="footer">
     <div class="layout layout--desktop layout--mobile">
-      <app-footer-top :button="footer.button" :time="footer.time" :media="footer.media" />
-      <div class="footer-sections">
-        <app-footer-section v-for="section in footer.sections" :key="section" :section="section" />
-      </div>
+      <app-footer-top />
+      <app-footer-sections />
+      <app-footer-bottom />
     </div>
   </div>
 </template>

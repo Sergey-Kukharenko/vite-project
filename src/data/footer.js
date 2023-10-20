@@ -44,11 +44,6 @@ export default {
       ]
     }
   ],
-  // social: [
-  //   {
-  //     title: 'Мы в соцсетях'
-  //   }
-  // ],
   sections: {
     brands: {
       title: 'Бренды конструкторов',
@@ -142,5 +137,29 @@ export default {
         { href: false, name: 'Подарочный сертификат' }
       ]
     }
-  }
+  },
+  copyright: '© Мир Кубиков, 2023',
+  files: [
+    {
+      href: false,
+      text: 'Политика конфиденциальности'
+    },
+    {
+      href: false,
+      text: 'Оферта'
+    },
+    {
+      href: false,
+      text: 'Cookies'
+    },
+    {
+      href: false,
+      text: 'Copyright'
+    },
+    {
+      href: false,
+      text: 'Политика рекомендаций'
+    }
+  ],
+  logo: 'logo'
 };

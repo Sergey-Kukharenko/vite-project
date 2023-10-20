@@ -1,26 +1,13 @@
 <script setup>
+import { ref } from 'vue';
+
 import AppBtn from '@/components/shared/btn/AppBtn.vue';
 import AppIcon from '@/components/shared/AppIcon.vue';
 import AppFooterMedia from '@/components/footer/footer-media/AppFooterMedia.vue';
 
-const props = defineProps({
-  button: {
-    type: Object,
-    default: () => ({})
-  },
+import dataFooter from '@/data/footer.js';
 
-  time: {
-    type: String,
-    default: ''
-  },
-
-  media: {
-    type: Array,
-    default: () => []
-  }
-});
-
-const { button, time, media } = props;
+const { button, time, media } = ref(dataFooter).value;
 </script>
 
 <template>
