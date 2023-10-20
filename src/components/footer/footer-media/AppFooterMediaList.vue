@@ -30,19 +30,53 @@ const props = defineProps({
   color: var(--black);
 }
 
+.item {
+  cursor: pointer;
+}
+
 .icon {
   fill: black;
 }
 
 .telegram {
-  &.colored {
-    fill: #37aee2;
+  &:hover {
+    fill: var(--telegram-colored);
   }
 }
 
-.whatsapp {
-  &.colored {
-    fill: #00b14e;
+.vk {
+  &:hover {
+    fill: var(--vk);
+  }
+}
+
+.youtube {
+  &:hover {
+    fill: var(--youtube);
+  }
+}
+
+.dzen {
+  &:hover {
+    fill: var(--dzen);
+  }
+}
+
+.colored {
+  &.telegram {
+    fill: var(--telegram-colored);
+
+    &:hover {
+      fill: var(--telegram-colored-hover);
+    }
+  }
+
+  &.whatsapp {
+    fill: var(--whatsapp-colored);
+
+    &:hover {
+      fill: var(--whatsapp-colored-hover);
+    }
   }
 }
 </style>

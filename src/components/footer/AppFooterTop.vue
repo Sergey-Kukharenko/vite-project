@@ -40,20 +40,35 @@ const { button, time, media } = props;
 
 <style scoped lang="scss">
 .footer-top {
+  @include lt-md {
+    flex-direction: column;
+  }
+
   display: flex;
 }
 
 .item {
+  @include lt-md {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   display: flex;
   align-items: center;
-  outline: 1px solid #000;
 
   &--phone {
+    @include gt-sm {
+      width: 40.4444%;
+    }
+
     gap: 10px;
-    width: 40.4444%;
   }
 
   &--social {
+    @include lt-md {
+      border-top: 1px solid var(--border-grey-color);
+    }
+
     flex: 1;
   }
 }

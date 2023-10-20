@@ -8,8 +8,17 @@
   --grey-extralight: #f1f1f1;
   --red: #d01012;
   --blue: #005be4;
+  --border-grey-color: #e5e5e5;
   --circle-bold: 'Circe_Bold';
   --circle-regular: 'Circe_Regular';
+
+  --telegram-colored: #37aee2;
+  --telegram-colored-hover: #2097cb;
+  --whatsapp-colored: #00b14e;
+  --whatsapp-colored-hover: #009a44;
+  --vk: #3755a4;
+  --youtube: #dd2929;
+  --dzen: #9b2121;
 }
 
 html {
@@ -55,39 +64,39 @@ input::-webkit-inner-spin-button {
 ::-webkit-input-placeholder {
   color: var(--grey-dark);
   opacity: 1;
-  -webkit-transition: opacity .05s;
-  transition: opacity .05s;
+  -webkit-transition: opacity 0.05s;
+  transition: opacity 0.05s;
 }
 
 /* Chrome <=56, Safari < 10 */
 :-moz-placeholder {
   color: var(--grey-dark);
   opacity: 1;
-  -moz-transition: opacity .05s;
-  transition: opacity .05s;
+  -moz-transition: opacity 0.05s;
+  transition: opacity 0.05s;
 }
 
 /* FF 4-18 */
 ::-moz-placeholder {
   color: var(--grey-dark);
   opacity: 1;
-  -moz-transition: opacity .05s;
-  transition: opacity .05s;
+  -moz-transition: opacity 0.05s;
+  transition: opacity 0.05s;
 }
 
 /* FF 19-51 */
 :-ms-input-placeholder {
   color: var(--grey-dark);
   opacity: 1;
-  -ms-transition: opacity .05s;
-  transition: opacity .05s;
+  -ms-transition: opacity 0.05s;
+  transition: opacity 0.05s;
 }
 
 /* IE 10+ */
 ::placeholder {
   color: var(--grey-dark);
   opacity: 1;
-  transition: opacity .05s;
+  transition: opacity 0.05s;
 }
 
 /* Modern Browsers */
@@ -118,7 +127,7 @@ input::-webkit-inner-spin-button {
 
 /* Modern Browsers */
 
-input[type=number] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
 

@@ -20,13 +20,24 @@ const { media } = defineProps({
 
 <style scoped lang="scss">
 .footer-media {
+  @include lt-md {
+    gap: 20px;
+  }
+
   display: flex;
+  width: 100%;
 }
 
 .item {
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  &:first-child {
+    @include gt-sm {
+      width: 34.2%;
+    }
+  }
 }
 
 .title {
