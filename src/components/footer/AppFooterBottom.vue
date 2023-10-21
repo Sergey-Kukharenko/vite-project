@@ -2,16 +2,22 @@
 import { ref } from 'vue';
 import dataFooter from '@/data/footer.js';
 import AppFooterFiles from '@/components/footer/AppFooterFiles.vue';
+import AppFooterPayments from '@/components/footer/AppFooterPayments.vue';
 
-const { copyright, files, logo } = ref(dataFooter).value;
+const { copyright, files, logo, payments } = ref(dataFooter).value;
 </script>
 
 <template>
   <div class="footer-bottom">
-    <div class="section">
+    <div class="container">
       <div class="copyright">{{ copyright }}</div>
-      <app-footer-files :files="files" />
-      <img :src="`/icons/${logo}.svg`" alt="" class="logo" />
+      <div class="section">
+        <app-footer-files :files="files" />
+      </div>
+      <div class="section">
+        <img :src="`/icons/${logo}.svg`" alt="" class="logo" />
+        <app-footer-payments :payments="payments" />
+      </div>
     </div>
   </div>
 </template>
@@ -33,10 +39,22 @@ const { copyright, files, logo } = ref(dataFooter).value;
   }
 }
 
-.section {
+.container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  outline: 1px solid #000;
+
+  @include lt-md {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .copyright {

@@ -161,5 +161,9 @@ export default {
       text: 'Политика рекомендаций'
     }
   ],
-  logo: 'logo'
+  logo: 'logo',
+  payments: {
+    title: 'Вы можете оплатить:',
+    list: ['visa', 'mastercard', 'mir', 'installment', 'kassa']
+  }
 };
