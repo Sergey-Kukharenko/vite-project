@@ -31,6 +31,16 @@ const { button, time, media } = ref(dataFooter).value;
     flex-direction: column;
   }
 
+  @include gt-sm {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @include lt-md {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   display: flex;
 }
 

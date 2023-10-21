@@ -1,16 +1,17 @@
 <script setup>
 import { ref } from 'vue';
 import dataFooter from '@/data/footer.js';
-import AppIcon from '@/components/shared/AppIcon.vue';
+import AppFooterFiles from '@/components/footer/AppFooterFiles.vue';
 
-const { copyright, logo } = ref(dataFooter).value;
+const { copyright, files, logo } = ref(dataFooter).value;
 </script>
 
 <template>
   <div class="footer-bottom">
     <div class="section">
-      <div>{{ copyright }}</div>
-      <app-icon :name="logo" />
+      <div class="copyright">{{ copyright }}</div>
+      <app-footer-files :files="files" />
+      <img :src="`/icons/${logo}.svg`" alt="" class="logo" />
     </div>
   </div>
 </template>
@@ -20,6 +21,16 @@ const { copyright, logo } = ref(dataFooter).value;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include gt-sm {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @include lt-md {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .section {
@@ -28,8 +39,14 @@ const { copyright, logo } = ref(dataFooter).value;
   gap: 10px;
 }
 
-.icon {
+.copyright {
+  font-size: 11px;
+  line-height: 15px;
+  color: var(--grey-dark);
+}
+
+.logo {
+  display: block;
   width: 150px;
-  height: auto;
 }
 </style>
