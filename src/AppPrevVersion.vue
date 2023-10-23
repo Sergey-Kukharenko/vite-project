@@ -15,6 +15,7 @@ import AppBanner from '@/components/banner/AppBanner.vue';
 import dataBanner from '@/data/banner.js';
 import AppConstructionsToys from '@/components/сonstructions-toys/AppConstructionsToys.vue';
 import AppSubscribe from '@/components/subscribe/AppSubscribe.vue';
+import AppFooter from '@/components/footer/AppFooter.vue';
 
 const series = ref(dataSeries);
 const brands = ref(dataBrands);
@@ -32,4 +33,5 @@ const banner = ref(dataBanner);
   <app-banner :banner="banner" />
   <app-constructions-toys />
   <app-subscribe />
+  <app-footer />
 </template>
