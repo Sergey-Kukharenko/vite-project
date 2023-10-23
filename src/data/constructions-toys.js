@@ -6,22 +6,22 @@ export default {
     'и эмоции. Хотя, почему только ребенку? :)',
   list: [
     {
-      href: false,
+      href: null,
       img: '/images/constructions-toys/1.jpg',
       title: 'Интернет-магазин\n' + 'с доставкой и резервом'
     },
     {
-      href: false,
+      href: null,
       img: '/images/constructions-toys/2.jpg',
       title: 'Тематические подборки\n' + 'по интересам'
     },
     {
-      href: false,
+      href: null,
       img: '/images/constructions-toys/3.jpg',
       title: 'Огромный ассортимент\n' + '70 магазинов в сети'
     },
     {
-      href: false,
+      href: null,
       img: '/images/constructions-toys/4.jpg',
       title: 'Увлекательные\n' + 'мероприятия для детей'
     }

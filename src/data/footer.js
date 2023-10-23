@@ -10,12 +10,12 @@ export default {
       title: 'Написать нам',
       list: [
         {
-          href: false,
+          href: null,
           icon: 'telegram',
           colored: true
         },
         {
-          href: false,
+          href: null,
           icon: 'whatsapp',
           colored: true
         }
@@ -26,19 +26,19 @@ export default {
       title: 'Мы в соцсетях',
       list: [
         {
-          href: false,
+          href: null,
           icon: 'telegram'
         },
         {
-          href: false,
+          href: null,
           icon: 'vk'
         },
         {
-          href: false,
+          href: null,
           icon: 'youtube'
         },
         {
-          href: false,
+          href: null,
           icon: 'dzen'
         }
       ]
@@ -48,116 +48,116 @@ export default {
     brands: {
       title: 'Бренды конструкторов',
       list: [
-        { href: false, name: 'LEGO' },
-        { href: false, name: 'LOZ' },
-        { href: false, name: 'Pantasy' },
-        { href: false, name: 'Mould King' },
-        { href: false, name: 'JAKI' },
-        { href: false, name: 'MoYu' },
-        { href: false, name: 'CaDA' },
-        { href: false, name: 'IM.Master' },
-        { href: false, name: 'MORK' },
-        { href: false, name: 'Reobrix' },
-        { href: false, name: 'Sembo' },
-        { href: false, name: 'Sluban' }
+        { href: null, name: 'LEGO' },
+        { href: null, name: 'LOZ' },
+        { href: null, name: 'Pantasy' },
+        { href: null, name: 'Mould King' },
+        { href: null, name: 'JAKI' },
+        { href: null, name: 'MoYu' },
+        { href: null, name: 'CaDA' },
+        { href: null, name: 'IM.Master' },
+        { href: null, name: 'MORK' },
+        { href: null, name: 'Reobrix' },
+        { href: null, name: 'Sembo' },
+        { href: null, name: 'Sluban' }
       ]
     },
     series: {
       title: 'Серии конструкторов',
       list: [
-        { href: false, name: 'Коллекционные наборы' },
-        { href: false, name: 'Уникальные наборы' },
-        { href: false, name: '4+' },
-        { href: false, name: 'ART' },
-        { href: false, name: 'Architecture' },
-        { href: false, name: 'Astro Boy' },
-        { href: false, name: 'Atomic Storm' },
-        { href: false, name: 'Avatar' },
-        { href: false, name: 'BrickHeadz' },
-        { href: false, name: 'City' },
-        { href: false, name: 'Classic' },
-        { href: false, name: 'Creator' },
-        { href: false, name: 'DOTS' },
-        { href: false, name: 'DREAMZzz' },
-        { href: false, name: 'DUPLO®' },
-        { href: false, name: 'Disney Princess™' },
-        { href: false, name: 'Friends' },
-        { href: false, name: "Gabby's Dollhouse" },
-        { href: false, name: 'Harry Potter' },
-        { href: false, name: 'Icons' },
-        { href: false, name: 'Ideas' },
-        { href: false, name: 'Indiana Jones' },
-        { href: false, name: 'Jurassic World™' },
-        { href: false, name: 'Marvel' },
-        { href: false, name: 'Minecraft' },
-        { href: false, name: 'Minifigures' },
-        { href: false, name: 'Minions' },
-        { href: false, name: 'Monkie Kid™' },
-        { href: false, name: 'Ninjago' },
-        { href: false, name: 'POPEYE' },
-        { href: false, name: 'Retro' },
-        { href: false, name: 'Saint Seiya' },
-        { href: false, name: 'Sonic the Hedgehog' },
-        { href: false, name: 'Space' },
-        { href: false, name: 'Speed Champions' },
-        { href: false, name: 'Star Wars™' },
-        { href: false, name: 'Super Heroes' },
-        { href: false, name: 'Super Mario' },
-        { href: false, name: 'Technic' },
-        { href: false, name: 'The LEGO® Movie 2' },
-        { href: false, name: 'VIDIYO' },
-        { href: false, name: 'Автогонки' },
-        { href: false, name: 'Город' },
-        { href: false, name: 'Модельки' },
-        { href: false, name: 'Пожарные' },
-        { href: false, name: 'Полиция' },
-        { href: false, name: 'Розовая мечта' }
+        { href: null, name: 'Коллекционные наборы' },
+        { href: null, name: 'Уникальные наборы' },
+        { href: null, name: '4+' },
+        { href: null, name: 'ART' },
+        { href: null, name: 'Architecture' },
+        { href: null, name: 'Astro Boy' },
+        { href: null, name: 'Atomic Storm' },
+        { href: null, name: 'Avatar' },
+        { href: null, name: 'BrickHeadz' },
+        { href: null, name: 'City' },
+        { href: null, name: 'Classic' },
+        { href: null, name: 'Creator' },
+        { href: null, name: 'DOTS' },
+        { href: null, name: 'DREAMZzz' },
+        { href: null, name: 'DUPLO®' },
+        { href: null, name: 'Disney Princess™' },
+        { href: null, name: 'Friends' },
+        { href: null, name: "Gabby's Dollhouse" },
+        { href: null, name: 'Harry Potter' },
+        { href: null, name: 'Icons' },
+        { href: null, name: 'Ideas' },
+        { href: null, name: 'Indiana Jones' },
+        { href: null, name: 'Jurassic World™' },
+        { href: null, name: 'Marvel' },
+        { href: null, name: 'Minecraft' },
+        { href: null, name: 'Minifigures' },
+        { href: null, name: 'Minions' },
+        { href: null, name: 'Monkie Kid™' },
+        { href: null, name: 'Ninjago' },
+        { href: null, name: 'POPEYE' },
+        { href: null, name: 'Retro' },
+        { href: null, name: 'Saint Seiya' },
+        { href: null, name: 'Sonic the Hedgehog' },
+        { href: null, name: 'Space' },
+        { href: null, name: 'Speed Champions' },
+        { href: null, name: 'Star Wars™' },
+        { href: null, name: 'Super Heroes' },
+        { href: null, name: 'Super Mario' },
+        { href: null, name: 'Technic' },
+        { href: null, name: 'The LEGO® Movie 2' },
+        { href: null, name: 'VIDIYO' },
+        { href: null, name: 'Автогонки' },
+        { href: null, name: 'Город' },
+        { href: null, name: 'Модельки' },
+        { href: null, name: 'Пожарные' },
+        { href: null, name: 'Полиция' },
+        { href: null, name: 'Розовая мечта' }
       ]
     },
     accessories: {
       title: 'Аксессуары',
       list: [
-        { href: false, name: 'Аксессуары' },
-        { href: false, name: 'Funko' },
-        { href: false, name: 'Детали LEGO' },
-        { href: false, name: 'Hot wheels' },
-        { href: false, name: 'Кубики Рубика' },
-        { href: false, name: 'Рюкзаки и сумки' },
-        { href: false, name: 'Канцтовары' },
-        { href: false, name: 'Чемоданы' },
-        { href: false, name: 'Пончо' },
-        { href: false, name: 'Подарочные наборы' },
-        { href: false, name: 'Оружие детское' },
-        { href: false, name: 'Часы и будильники' },
-        { href: false, name: 'Фонарики и брелоки' },
-        { href: false, name: 'Системы хранения' },
-        { href: false, name: 'Книги, журналы' },
-        { href: false, name: 'Для ланча' },
-        { href: false, name: 'Другое' },
-        { href: false, name: 'Подарочный сертификат' }
+        { href: null, name: 'Аксессуары' },
+        { href: null, name: 'Funko' },
+        { href: null, name: 'Детали LEGO' },
+        { href: null, name: 'Hot wheels' },
+        { href: null, name: 'Кубики Рубика' },
+        { href: null, name: 'Рюкзаки и сумки' },
+        { href: null, name: 'Канцтовары' },
+        { href: null, name: 'Чемоданы' },
+        { href: null, name: 'Пончо' },
+        { href: null, name: 'Подарочные наборы' },
+        { href: null, name: 'Оружие детское' },
+        { href: null, name: 'Часы и будильники' },
+        { href: null, name: 'Фонарики и брелоки' },
+        { href: null, name: 'Системы хранения' },
+        { href: null, name: 'Книги, журналы' },
+        { href: null, name: 'Для ланча' },
+        { href: null, name: 'Другое' },
+        { href: null, name: 'Подарочный сертификат' }
       ]
     }
   },
   copyright: '© Мир Кубиков, 2023',
   files: [
     {
-      href: false,
+      href: null,
       text: 'Политика конфиденциальности'
     },
     {
-      href: false,
+      href: null,
       text: 'Оферта'
     },
     {
-      href: false,
+      href: null,
       text: 'Cookies'
     },
     {
-      href: false,
+      href: null,
       text: 'Copyright'
     },
     {
-      href: false,
+      href: null,
       text: 'Политика рекомендаций'
     }
   ],
@@ -165,5 +165,31 @@ export default {
   payments: {
     title: 'Вы можете оплатить:',
     list: ['visa', 'mastercard', 'mir', 'installment', 'kassa']
-  }
+  },
+  brands: [
+    {
+      href: null,
+      icon: 'restore'
+    },
+    {
+      href: null,
+      icon: 'street-beat'
+    },
+    {
+      href: null,
+      icon: 'uno'
+    },
+    {
+      href: null,
+      icon: 'samsung'
+    },
+    {
+      href: null,
+      icon: 'mi'
+    },
+    {
+      href: null,
+      icon: 'akit'
+    }
+  ]
 };
