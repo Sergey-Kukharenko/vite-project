@@ -1,6 +1,8 @@
 <script setup>
 import { computed, ref } from 'vue';
+import { Collapse } from 'vue-collapsed';
 import AppIcon from '@/components/shared/AppIcon.vue';
+import { useMq } from 'vue3-mq';
 
 const props = defineProps({
   section: {
@@ -9,25 +11,33 @@ const props = defineProps({
   }
 });
 
-const isVisible = ref(false);
-
 const classNames = computed(() => ({
   'footer-section': true,
   active: isVisible.value
 }));
+
+const mq = useMq();
+const isMobile = computed(() => mq.current === 'xs' || mq.current === 'sm');
+
+const isVisible = ref(false);
+const isExpand = computed(() => (isMobile.value ? isVisible.value : true));
+const onVisibility = () => isMobile.value && (isVisible.value = !isVisible.value);
 </script>
 
 <template>
   <div :class="classNames">
-    <div class="title" @click="isVisible = !isVisible">
+    <div class="title" @click="onVisibility">
       {{ props.section.title }}
       <app-icon name="footer-plus" />
     </div>
-    <div class="list">
-      <a v-for="item in props.section.list" :key="item" class="item">
-        {{ item.name }}
-      </a>
-    </div>
+
+    <Collapse :when="isExpand" class="expand">
+      <div class="list">
+        <a v-for="item in props.section.list" :key="item" class="item">
+          {{ item.name }}
+        </a>
+      </div>
+    </Collapse>
   </div>
 </template>
 
