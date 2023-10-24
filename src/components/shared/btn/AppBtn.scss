@@ -12,7 +12,7 @@
 
   font-weight: 700;
   line-height: normal;
-  color: var(--black);
+  color: black;
 
   border: none;
   outline: none;
@@ -36,8 +36,8 @@
 
   &:not(:disabled) {
     &:hover {
-      color: var(--white);
-      background: var(--black);
+      color: white;
+      background: black;
     }
   }
 
@@ -51,14 +51,14 @@
 
   &--ghost {
     background: none;
-    border: 1px solid var(--black);
+    border: 1px solid black;
   }
 
   &--processing {
     &:disabled {
-      color: var(--white);
+      color: white;
       opacity: 0.4;
-      background: var(--black);
+      background: black;
 
       & .content {
         opacity: 0;
@@ -94,8 +94,8 @@
   &--subscribe {
     &:not(:disabled) {
       &:hover {
-        color: var(--black);
-        background: var(--white);
+        color: black;
+        background: white;
       }
     }
   }

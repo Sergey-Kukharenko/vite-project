@@ -46,7 +46,7 @@ const styles = computed(() => ({
   height: 10px;
   margin: 2px;
 
-  background-color: var(--white);
+  background-color: white;
   border-radius: 100%;
 
   -webkit-animation: circleStretchDelay 0.7s infinite linear;

@@ -27,7 +27,7 @@ const props = defineProps({
   font-size: 14px;
   font-weight: 700;
   line-height: 17px;
-  color: var(--black);
+  color: black;
 }
 
 .item {

@@ -56,13 +56,13 @@ const modules = [FreeMode, Pagination, Navigation, Mousewheel, Keyboard];
   & .swiper-button-next {
     width: 46px;
     height: 46px;
-    background: var(--white);
+    background: white;
     border-radius: 100%;
 
     &:after {
       font-size: 20px;
       font-weight: bold;
-      color: var(--black);
+      color: black;
     }
 
     @include lt-md {

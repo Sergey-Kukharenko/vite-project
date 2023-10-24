@@ -35,7 +35,7 @@ const { brands } = defineProps({
   fill: var(--grey-brand);
 
   &:hover {
-    fill: var(--black);
+    fill: black;
   }
 }
 </style>

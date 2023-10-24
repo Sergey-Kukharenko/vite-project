@@ -70,7 +70,7 @@ const quickLinks = ref(dataQuickLinks);
   font-size: 12px;
   font-weight: 400;
   line-height: normal;
-  color: var(--black);
+  color: black;
 }
 
 .link {

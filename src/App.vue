@@ -1,9 +1,9 @@
 <script setup>
-import AppFooter from '@/components/footer/AppFooter.vue';
+import AppHeader from '@/components/header/AppHeader.vue';
 </script>
 
 <template>
-  <app-footer />
+  <app-header />
 </template>
 
 <style lang="scss">

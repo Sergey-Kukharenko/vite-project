@@ -1,5 +1,5 @@
 .subscribe {
-  
+
   @include gt-sm {
     margin: 78px auto 90px;
     padding: 33px 78px 47px;
@@ -13,7 +13,7 @@
   }
 
   position: relative;
-  background: var(--black);
+  background: black;
 
   & .subscribe-form {
     position: relative;
@@ -38,7 +38,7 @@
 
   margin-bottom: 30px;
   font-weight: 700;
-  color: var(--white);
+  color: white;
 }
 
 img {
