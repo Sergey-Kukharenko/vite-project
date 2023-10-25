@@ -23,4 +23,14 @@ import AppHeaderLocation from '@/components/header/AppHeaderLocation.vue';
   height: 24px;
   background: var(--border-grey-color);
 }
+
+:deep(a) {
+  cursor: pointer;
+  font-size: 14px;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 </style>

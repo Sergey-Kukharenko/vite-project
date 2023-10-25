@@ -24,17 +24,8 @@ const nav = ref(headerNav);
 }
 
 a {
-  cursor: pointer;
-
   display: flex;
   column-gap: 4px;
   align-items: center;
-
-  font-size: 14px;
-  color: inherit;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 </style>
