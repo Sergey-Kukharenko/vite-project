@@ -1,11 +1,6 @@
 export default [
   {
     href: null,
-    text: 'Акции',
-    icon: ''
-  },
-  {
-    href: null,
     text: 'Магазины',
     icon: ''
   },

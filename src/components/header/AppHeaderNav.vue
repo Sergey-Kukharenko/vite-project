@@ -9,7 +9,7 @@ const nav = ref(headerNav);
 
 <template>
   <div class="header-nav">
-    <a v-for="item in nav" :key="item.text" :href="item.href" class="item">
+    <a v-for="item in nav" :key="item.text" :href="item.href">
       <app-icon v-if="item.icon" :name="item.icon" />
       {{ item.text }}
     </a>
@@ -19,16 +19,19 @@ const nav = ref(headerNav);
 <style scoped lang="scss">
 .header-nav {
   display: flex;
-  align-items: center;
   column-gap: 10px;
+  align-items: center;
 }
 
-.item {
+a {
+  cursor: pointer;
+
   display: flex;
-  align-items: center;
   column-gap: 4px;
-  color: inherit;
+  align-items: center;
+
   font-size: 14px;
+  color: inherit;
 
   &:hover {
     text-decoration: underline;
