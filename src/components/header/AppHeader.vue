@@ -1,6 +1,6 @@
 <script setup>
 import AppHeaderNav from '@/components/header/AppHeaderNav.vue';
-import AppHeaderLocation from '@/components/header/AppHeaderLocation.vue';
+import AppHeaderLocation from '@/components/header/header-location/AppHeaderLocation.vue';
 </script>
 
 <template>

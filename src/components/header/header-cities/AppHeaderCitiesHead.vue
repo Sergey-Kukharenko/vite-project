@@ -1,3 +1,16 @@
+<script setup></script>
+
+<template>
+  <div class="header">
+    <div class="title">Выберите город</div>
+    <div class="close">
+      <img src="/images/icons/cross.png" alt="cross" />
+      <img src="/images/icons/cross-hovered.png" alt="cross" />
+    </div>
+  </div>
+</template>
+
+<style scoped lang="scss">
 .header {
   display: flex;
   justify-content: space-between;
@@ -55,3 +68,4 @@
     }
   }
 }
+</style>

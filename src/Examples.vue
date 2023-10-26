@@ -10,9 +10,9 @@ const value = ref('');
 <template>
   <AppBannerCard />
   <div class="row-example">
-    <app-input v-model:value="value" placeholder="Label" />
-    <app-input v-model:value="value" placeholder="Label" disabled />
-    <app-input v-model:value="value" placeholder="Label" appearance="white" />
+    <app-input v-model="value" placeholder="Label" />
+    <app-input v-model="value" placeholder="Label" disabled />
+    <app-input v-model="value" placeholder="Label" appearance="white" />
   </div>
   <div class="row-example">
     <app-btn tag="a">link</app-btn>

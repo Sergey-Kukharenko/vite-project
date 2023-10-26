@@ -6,13 +6,13 @@ const cities = ref(dataCities);
 </script>
 
 <template>
-  <div class="cities-list">
+  <div class="header-cities-list">
     <div v-for="item in cities" :key="item" class="item">{{ item }}</div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.cities-list {
+.header-cities-list {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: auto;
