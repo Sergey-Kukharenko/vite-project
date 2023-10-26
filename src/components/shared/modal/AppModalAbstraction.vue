@@ -6,7 +6,20 @@ import AppIcon from '@/components/shared/AppIcon.vue';
 const props = defineProps({
   align: {
     type: String,
-    default: ''
+    default: 'center',
+    validator(value) {
+      return ['start', 'center'].includes(value);
+    }
+  },
+
+  closeBtn: {
+    type: Boolean,
+    required: true
+  },
+
+  width: {
+    type: String,
+    default: '300'
   }
 });
 
@@ -26,19 +39,23 @@ const classNames = computed(() => ({
   modal: true,
   [`modal--${props.align}`]: props.align
 }));
+
+const styles = computed(() => ({
+  style: {
+    'flex-basis': `${props.width}px`
+  }
+}));
 </script>
 
 <template>
   <Teleport to="body">
     <div :class="classNames">
       <div class="overlay" @click="close" />
-      <div class="content">
-        <div class="layout">
-          <slot />
-          <button type="button" class="button" @click="close">
-            <app-icon name="close" />
-          </button>
-        </div>
+      <div class="content" v-bind="styles">
+        <slot />
+        <button v-if="props.closeBtn" type="button" class="button" @click="close">
+          <app-icon name="close" />
+        </button>
       </div>
     </div>
   </Teleport>

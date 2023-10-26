@@ -13,3 +13,21 @@
   src: url('../fonts/Circe_Regular.woff2') format('woff2'),
   url('../fonts/Circe_Regular.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'RotondaC';
+  src: url('../fonts/Rotonda.eot'),
+  url('../fonts/Rotonda.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Rotonda.woff2') format('woff2'),
+  url('../fonts/Rotonda.woff') format('woff'),
+  url('../fonts/Rotonda.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Rotonda-Bold';
+  src: url('../fonts/Rotonda-Bold.eot'),
+  url('../fonts/Rotonda-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Rotonda-Bold.woff2') format('woff2'),
+  url('../fonts/Rotonda-Bold.woff') format('woff'),
+  url('../fonts/Rotonda-Bold.svg') format('svg');
+}

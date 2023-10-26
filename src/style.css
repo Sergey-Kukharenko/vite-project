@@ -1,4 +1,9 @@
 :root {
+  --circle-bold: 'Circe_Bold';
+  --circle-regular: 'Circe_Regular';
+  --rotonda-c: 'RotondaC';
+  --rotonda-bold: 'Rotonda-Bold';
+
   --yellow: #ffc42e;
   --grey: #c4c4c4;
   --grey-dark: #868686;
@@ -7,8 +12,6 @@
   --red: #d01012;
   --blue: #005be4;
   --border-grey-color: #e5e5e5;
-  --circle-bold: 'Circe_Bold';
-  --circle-regular: 'Circe_Regular';
 
   --telegram-colored: #37aee2;
   --telegram-colored-hover: #2097cb;
@@ -19,6 +22,7 @@
   --dzen: #9b2121;
 
   --grey-brand: #b2b2b2;
+  --black-title: #2c2c2c
 }
 
 html {
@@ -141,3 +145,6 @@ input[type='number'] {
 .row-example > * {
   margin: 0.2em;
 }
+
+
+

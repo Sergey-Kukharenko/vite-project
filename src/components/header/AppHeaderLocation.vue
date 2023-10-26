@@ -1,8 +1,9 @@
 <script setup>
 import { ref } from 'vue';
-import AppIcon from '@/components/shared/AppIcon.vue';
 import AppModal from '@/components/shared/modal/AppModal.vue';
 import { disableScroll, enableScroll } from '@/helpers/scrollLock.js';
+import AppCities from '@/components/header/cities/AppCities.vue';
+import AppLocationBtn from '@/components/header/AppLocationBtn.vue';
 
 const isModalVisible = ref(true);
 
@@ -18,17 +19,10 @@ const closeModal = () => {
 </script>
 
 <template>
-  <div class="header-location" @click="openModal">
-    <app-icon name="location" />
-    <a>Москва и область</a>
-  </div>
-  <app-modal :visible="isModalVisible" align="center" @close="closeModal" />
+  <app-location-btn @click="openModal" />
+  <app-modal :visible="isModalVisible" align="start" :close-btn="false" width="645" @close="closeModal">
+    <app-cities />
+  </app-modal>
 </template>
 
-<style scoped lang="scss">
-.header-location {
-  display: flex;
-  column-gap: 22px;
-  align-items: center;
-}
-</style>
+<style scoped lang="scss"></style>

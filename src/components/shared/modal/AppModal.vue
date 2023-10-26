@@ -9,7 +9,20 @@ const props = defineProps({
 
   align: {
     type: String,
-    default: ''
+    default: 'center',
+    validator(value) {
+      return ['start', 'center'].includes(value);
+    }
+  },
+
+  closeBtn: {
+    type: Boolean,
+    required: true
+  },
+
+  width: {
+    type: String,
+    default: '300'
   }
 });
 
@@ -18,7 +31,13 @@ const close = () => emit('close');
 </script>
 
 <template>
-  <AppModalAbstraction v-if="props.visible" :align="props.align" @close="close">
+  <AppModalAbstraction
+    v-if="props.visible"
+    :align="props.align"
+    :close-btn="props.closeBtn"
+    :width="props.width"
+    @close="close"
+  >
     <slot />
   </AppModalAbstraction>
 </template>
