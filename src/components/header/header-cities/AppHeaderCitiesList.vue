@@ -1,12 +1,13 @@
 <script setup>
 import { ref } from 'vue';
 import dataCities from '@/data/cities.js';
+import { store } from '@/hooks/location.js';
 
 const cities = ref(dataCities);
-
 const selected = ref(0);
-const onCLick = (idx) => {
-  selected.value = idx;
+const onCLick = (item) => {
+  selected.value = item.id;
+  store.setLocation(item.name);
 };
 </script>
 
@@ -17,7 +18,7 @@ const onCLick = (idx) => {
       :key="item"
       class="item"
       :class="{ active: selected === item.id }"
-      @click="onCLick(item.id)"
+      @click="onCLick(item)"
     >
       {{ item.name }}
     </div>
