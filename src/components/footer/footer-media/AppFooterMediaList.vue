@@ -1,7 +1,7 @@
 <script setup>
 import AppIcon from '@/components/shared/AppIcon.vue';
 
-const props = defineProps({
+defineProps({
   list: {
     type: Array,
     default: () => []
@@ -11,7 +11,7 @@ const props = defineProps({
 
 <template>
   <div class="footer-media-list">
-    <div v-for="item in props.list" :key="item.title" class="item">
+    <div v-for="item in list" :key="item.title" class="item">
       <app-icon :name="item.icon" :class="[item.icon, { colored: item.colored }]" />
     </div>
   </div>

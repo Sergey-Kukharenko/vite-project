@@ -2,7 +2,7 @@
 import AppBtn from '@/components/shared/btn/AppBtn.vue';
 import AppListCards from '@/components/section-cards/app-list-cards.vue';
 
-const { title, list, button } = defineProps({
+defineProps({
   title: {
     type: String,
     default: ''

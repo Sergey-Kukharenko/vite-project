@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import { useMq } from 'vue3-mq';
 
-const { slide } = defineProps({
+defineProps({
   slide: {
     type: Object,
     default: () => ({})

@@ -15,7 +15,6 @@
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 20px;
   padding-bottom: 15px;
 
   border-bottom: 1px solid #e6e6e6;

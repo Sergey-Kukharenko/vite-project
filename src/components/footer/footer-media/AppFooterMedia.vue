@@ -1,7 +1,7 @@
 <script setup>
 import AppFooterMediaList from '@/components/footer/footer-media/AppFooterMediaList.vue';
 
-const { media } = defineProps({
+defineProps({
   media: {
     type: Array,
     default: () => []

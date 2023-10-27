@@ -1,7 +1,7 @@
 <script setup>
 import AppCard from '@/components/card/AppCard.vue';
 
-const { list } = defineProps({
+defineProps({
   list: {
     type: Array,
     default: () => []

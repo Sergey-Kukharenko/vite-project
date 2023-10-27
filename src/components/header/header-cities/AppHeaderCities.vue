@@ -11,3 +11,10 @@ import AppHeaderCitiesSearch from '@/components/header/AppHeaderCitiesSearch.vue
     <app-header-cities-search />
   </div>
 </template>
+<style lang="scss" scoped>
+.header-cities {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+</style>

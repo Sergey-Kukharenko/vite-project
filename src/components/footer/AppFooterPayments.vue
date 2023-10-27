@@ -1,7 +1,7 @@
 <script setup>
 import AppIcon from '@/components/shared/AppIcon.vue';
 
-const { payments } = defineProps({
+defineProps({
   payments: {
     type: Object,
     default: () => ({})

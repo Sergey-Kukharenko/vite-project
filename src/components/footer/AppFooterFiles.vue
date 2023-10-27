@@ -1,5 +1,5 @@
 <script setup>
-const { files } = defineProps({
+defineProps({
   files: {
     type: Array,
     default: () => []

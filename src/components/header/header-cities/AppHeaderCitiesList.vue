@@ -3,11 +3,24 @@ import { ref } from 'vue';
 import dataCities from '@/data/cities.js';
 
 const cities = ref(dataCities);
+
+const selected = ref(0);
+const onCLick = (idx) => {
+  selected.value = idx;
+};
 </script>
 
 <template>
   <div class="header-cities-list">
-    <div v-for="item in cities" :key="item" class="item">{{ item }}</div>
+    <div
+      v-for="item in cities"
+      :key="item"
+      class="item"
+      :class="{ active: selected === item.id }"
+      @click="onCLick(item.id)"
+    >
+      {{ item.name }}
+    </div>
   </div>
 </template>
 

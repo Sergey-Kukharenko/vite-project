@@ -1,7 +1,7 @@
 <script setup>
 import AppConstructionsToysCard from '@/components/сonstructions-toys/AppConstructionsToysCard.vue';
 
-const { list } = defineProps({
+defineProps({
   list: {
     type: Array,
     default: () => []

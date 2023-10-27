@@ -2,7 +2,7 @@
 import { useMq } from 'vue3-mq';
 import { computed } from 'vue';
 
-const { banner } = defineProps({
+defineProps({
   banner: {
     type: Object,
     default: () => ({})

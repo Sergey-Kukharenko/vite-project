@@ -4,7 +4,7 @@ import { Collapse } from 'vue-collapsed';
 import AppIcon from '@/components/shared/AppIcon.vue';
 import { useMq } from 'vue3-mq';
 
-const props = defineProps({
+defineProps({
   section: {
     type: Object,
     default: () => ({})
@@ -27,13 +27,13 @@ const onVisibility = () => isMobile.value && (isVisible.value = !isVisible.value
 <template>
   <div :class="classNames">
     <div class="title" @click="onVisibility">
-      {{ props.section.title }}
+      {{ section.title }}
       <app-icon name="footer-plus" />
     </div>
 
     <Collapse :when="isExpand" class="expand">
       <div class="list">
-        <a v-for="item in props.section.list" :key="item" class="item">
+        <a v-for="item in section.list" :key="item" class="item">
           {{ item.name }}
         </a>
       </div>

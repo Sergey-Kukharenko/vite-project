@@ -25,6 +25,11 @@ const props = defineProps({
     default: false
   },
 
+  grow: {
+    type: Boolean,
+    default: false
+  },
+
   appearance: {
     type: String,
     default: 'grey',
@@ -48,6 +53,7 @@ defineEmits(['update:modelValue']);
 
 const classNames = computed(() => ({
   'app-input': true,
+  [`app-input--grow`]: props.grow,
   [`app-input--${props.appearance}`]: props.appearance,
   [`app-input--${props.cls}`]: props.cls,
   [`app-input--error`]: props.errors.length
@@ -57,7 +63,7 @@ const classNames = computed(() => ({
 <template>
   <div :class="classNames">
     <input
-      :value="modelValue"
+      :value="props.modelValue"
       :type="props.type"
       :placeholder="props.placeholder"
       :disabled="props.disabled"

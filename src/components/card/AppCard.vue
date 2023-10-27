@@ -2,7 +2,7 @@
 import AppBtn from '@/components/shared/btn/AppBtn.vue';
 import AppIcon from '@/components/shared/AppIcon.vue';
 
-const { card } = defineProps({
+defineProps({
   card: {
     type: Object,
     default: () => ({})

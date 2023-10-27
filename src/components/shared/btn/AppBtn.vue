@@ -16,11 +16,6 @@ const props = defineProps({
     default: null
   },
 
-  cls: {
-    type: String,
-    default: null
-  },
-
   target: {
     type: String,
     default: null,
@@ -34,7 +29,7 @@ const props = defineProps({
     default: false
   },
 
-  processing: {
+  grow: {
     type: Boolean,
     default: false
   },
@@ -61,11 +56,22 @@ const props = defineProps({
     validator(value) {
       return ['small', 'medium', 'large'].includes(value);
     }
+  },
+
+  processing: {
+    type: Boolean,
+    default: false
+  },
+
+  cls: {
+    type: String,
+    default: null
   }
 });
 
 const classNames = computed(() => ({
   btn: true,
+  [`btn--grow`]: props.grow,
   [`btn--${props.appearance}`]: props.appearance,
   [`btn--${props.size}`]: props.size,
   [`btn--font-size-${props.fontSize}`]: props.fontSize,

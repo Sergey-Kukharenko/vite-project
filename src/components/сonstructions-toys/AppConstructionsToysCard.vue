@@ -1,5 +1,5 @@
 <script setup>
-const { card } = defineProps({
+defineProps({
   card: {
     type: Object,
     default: () => ({})

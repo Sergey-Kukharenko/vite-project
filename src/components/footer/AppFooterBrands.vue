@@ -1,7 +1,7 @@
 <script setup>
 import AppIcon from '@/components/shared/AppIcon.vue';
 
-const { brands } = defineProps({
+defineProps({
   brands: {
     type: Array,
     default: () => []

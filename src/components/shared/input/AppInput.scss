@@ -1,13 +1,21 @@
 .app-input {
-  @include gt-sm {
-    width: 290px;
-  }
-
   @include lt-md {
     width: 100%;
   }
 
   position: relative;
+
+  &--grow {
+    @include gt-sm {
+      width: 100%;
+    }
+  }
+
+  &:not(&--grow) {
+    @include gt-sm {
+      width: 290px;
+    }
+  }
 
   & input {
     box-sizing: border-box;

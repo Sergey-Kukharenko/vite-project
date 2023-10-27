@@ -3,7 +3,7 @@ import AppSwiper from '@/components/ui/AppSwiper.vue';
 import AppBtn from '@/components/shared/btn/AppBtn.vue';
 import AppBrandsCard from '@/components/brands/AppBrandsCard.vue';
 
-const props = defineProps({
+defineProps({
   title: {
     type: String,
     default: ''
@@ -14,8 +14,6 @@ const props = defineProps({
     default: () => []
   }
 });
-
-const { title, slides } = props;
 
 const options = {
   slidesPerView: 2.2,
