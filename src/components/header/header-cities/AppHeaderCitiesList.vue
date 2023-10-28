@@ -1,13 +1,13 @@
 <script setup>
 import { ref } from 'vue';
 import dataCities from '@/data/cities.js';
-import { store } from '@/hooks/location.js';
+import { location } from '@/states/location.js';
 
 const cities = ref(dataCities);
 const selected = ref(0);
 const onCLick = (item) => {
   selected.value = item.id;
-  store.setLocation(item.name);
+  location.setCity(item.name);
 };
 </script>
 

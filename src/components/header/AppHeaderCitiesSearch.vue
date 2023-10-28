@@ -2,11 +2,12 @@
 import { ref } from 'vue';
 import AppInput from '@/components/shared/input/AppInput.vue';
 import AppBtn from '@/components/shared/btn/AppBtn.vue';
+import { location } from '@/states/location.js';
 
 const city = ref('');
 const onSubmit = () => {
-  console.log('submit here');
-  console.log(city.value);
+  location.setCity(city.value);
+  city.value = '';
 };
 </script>
 

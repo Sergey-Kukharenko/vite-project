@@ -1,12 +1,12 @@
 <script setup>
 import AppIcon from '@/components/shared/AppIcon.vue';
-import { store } from '@/hooks/location.js';
+import { location } from '@/states/location.js';
 </script>
 
 <template>
   <a class="header-location-btn">
     <app-icon name="location" />
-    <span>{{ store.location }}</span>
+    <span>{{ location.city }}</span>
   </a>
 </template>
 

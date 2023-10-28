@@ -24,5 +24,3 @@ const closeModal = () => {
     <app-header-cities />
   </app-modal>
 </template>
-
-<style scoped lang="scss"></style>
