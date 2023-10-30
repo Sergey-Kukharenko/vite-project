@@ -14,7 +14,7 @@ const { button, time, media } = ref(dataFooter).value;
   <div class="footer-top">
     <div class="item item--phone">
       <app-btn appearance="grey" cls="phone">
-        <app-icon :name="button.icon" />
+        <app-icon :name="button.icon" width="22" height="22" />
         {{ button.phone }}
       </app-btn>
       <div class="time">{{ time }}</div>

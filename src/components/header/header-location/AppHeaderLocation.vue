@@ -5,7 +5,7 @@ import AppHeaderCities from '@/components/header/header-cities/AppHeaderCities.v
 import AppModal from '@/components/shared/modal/AppModal.vue';
 import { disableScroll, enableScroll } from '@/helpers/scrollLock.js';
 
-const isModalVisible = ref(true);
+const isModalVisible = ref(false);
 
 const openModal = () => {
   isModalVisible.value = true;
@@ -21,6 +21,6 @@ const closeModal = () => {
 <template>
   <app-header-location-btn @click="openModal" />
   <app-modal :visible="isModalVisible" align="start" :close-btn="false" width="645" @close="closeModal">
-    <app-header-cities />
+    <app-header-cities @close="closeModal" />
   </app-modal>
 </template>

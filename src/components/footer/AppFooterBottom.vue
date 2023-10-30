@@ -18,7 +18,7 @@ const { copyright, files, logo, payments, brands } = ref(dataFooter).value;
         <app-footer-payments :payments="payments" />
       </div>
       <div class="section">
-        <app-icon :name="logo" />
+        <app-icon :name="logo" width="150" height="24" />
         <app-footer-brands :brands="brands" />
       </div>
     </div>
@@ -72,5 +72,10 @@ const { copyright, files, logo, payments, brands } = ref(dataFooter).value;
   font-size: 11px;
   line-height: 15px;
   color: var(--grey-dark);
+}
+
+.icon {
+  width: 150px;
+  height: 24px;
 }
 </style>

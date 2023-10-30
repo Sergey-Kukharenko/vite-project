@@ -1,9 +1,12 @@
-<script setup></script>
+<script setup>
+const emit = defineEmits(['close']);
+const close = () => emit('close');
+</script>
 
 <template>
   <div class="header">
     <div class="title">Выберите город</div>
-    <div class="close">
+    <div class="close" @click="close">
       <img src="/images/icons/cross.png" alt="cross" />
       <img src="/images/icons/cross-hovered.png" alt="cross" />
     </div>

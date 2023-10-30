@@ -1,5 +1,5 @@
 <script setup>
-import AppFooterMediaList from '@/components/footer/footer-media/AppFooterMediaList.vue';
+import AppMessengers from '@/components/shared/AppMessengers.vue';
 
 defineProps({
   media: {
@@ -13,7 +13,7 @@ defineProps({
   <div class="footer-media">
     <div v-for="item in media" :key="item.title" class="item">
       <div class="title">{{ item.title }}</div>
-      <app-footer-media-list :list="item.list" />
+      <app-messengers :list="item.list" />
     </div>
   </div>
 </template>

@@ -10,24 +10,17 @@ defineProps({
 </script>
 
 <template>
-  <div class="footer-media-list">
-    <div v-for="item in list" :key="item.title" class="item">
+  <div class="messengers">
+    <a v-for="item in list" :key="item.title" class="item">
       <app-icon :name="item.icon" :class="[item.icon, { colored: item.colored }]" />
-    </div>
+    </a>
   </div>
 </template>
 
 <style scoped lang="scss">
-.footer-media-list {
+.messengers {
   display: flex;
   gap: 10px;
-}
-
-.title {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 17px;
-  color: black;
 }
 
 .item {

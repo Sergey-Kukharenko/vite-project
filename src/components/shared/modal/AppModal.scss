@@ -17,6 +17,12 @@
   &--center {
     align-items: center;
   }
+
+  &--grow {
+    & .content {
+      flex-basis: 100%;
+    }
+  }
 }
 
 .overlay {

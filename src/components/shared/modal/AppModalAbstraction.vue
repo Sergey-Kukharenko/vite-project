@@ -20,6 +20,11 @@ const props = defineProps({
   width: {
     type: String,
     default: '300'
+  },
+
+  grow: {
+    type: Boolean,
+    default: false
   }
 });
 
@@ -37,7 +42,8 @@ useEventListener(window, 'keyup', handleKeyup);
 
 const classNames = computed(() => ({
   modal: true,
-  [`modal--${props.align}`]: props.align
+  [`modal--${props.align}`]: props.align,
+  ['modal--grow']: props.grow
 }));
 
 const styles = computed(() => ({

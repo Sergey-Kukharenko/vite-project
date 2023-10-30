@@ -22,7 +22,9 @@
   --dzen: #9b2121;
 
   --grey-brand: #b2b2b2;
-  --black-title: #2c2c2c
+  --black-title: #2c2c2c;
+
+  --grey-bg-search: #f1f1f1;
 }
 
 html {
@@ -145,6 +147,8 @@ input[type='number'] {
 .row-example > * {
   margin: 0.2em;
 }
+
+
 
 
 
