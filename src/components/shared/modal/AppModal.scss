@@ -23,6 +23,15 @@
       flex-basis: 100%;
     }
   }
+
+  &--search {
+    top: 130px;
+
+    & .content {
+      outline: 1px solid;
+      border-radius: 0;
+    }
+  }
 }
 
 .overlay {

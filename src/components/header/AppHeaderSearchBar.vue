@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import AppIcon from '@/components/shared/AppIcon.vue';
 import { disableScroll, enableScroll } from '@/helpers/scrollLock.js';
 import AppModal from '@/components/shared/modal/AppModal.vue';
-import AppHeaderCities from '@/components/header/header-cities/AppHeaderCities.vue';
+import AppHeaderSearchResults from '@/components/header/AppHeaderSearchResults.vue';
 
 const search = ref('');
 
@@ -12,7 +12,7 @@ const onSubmit = () => {
   search.value = '';
 };
 
-const isModalVisible = ref(false);
+const isModalVisible = ref(true);
 
 const openModal = () => {
   isModalVisible.value = true;
@@ -23,25 +23,46 @@ const closeModal = () => {
   isModalVisible.value = false;
   enableScroll();
 };
+
+const onPageChange = (event) => {
+  event.target.blur();
+};
 </script>
 
 <template>
   <div class="header-search-bar">
+    <div v-show="isModalVisible" class="header-search-overlay-bg" @click="closeModal" />
     <form class="header-search" @submit.prevent="onSubmit">
-      <input v-model="search" type="text" placeholder="Поиск по сайту" @focus="openModal" />
+      <input v-model="search" type="text" placeholder="Поиск по сайту" @focus="openModal" @keydown.esc="onPageChange" />
       <button>
         <app-icon name="magnifying-glass" />
       </button>
     </form>
 
-    <app-modal :visible="isModalVisible" align="start" :close-btn="false" grow @close="closeModal">
-      <h1>HI</h1>
+    <app-modal :visible="isModalVisible" align="start" :close-btn="false" grow cls="search" @close="closeModal">
+      <app-header-search-results />
     </app-modal>
   </div>
 </template>
 
 <style scoped lang="scss">
+.header-search-overlay-bg {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  height: 130px;
+
+  opacity: 0.8;
+  background: white;
+}
+
 .header-search {
+  position: relative;
+  z-index: 2;
+
   display: flex;
   align-items: center;
 
@@ -82,5 +103,10 @@ button {
       fill: black;
     }
   }
+}
+
+.modal-search {
+  top: 130px;
+  border: none;
 }
 </style>

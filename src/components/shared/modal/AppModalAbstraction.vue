@@ -25,6 +25,11 @@ const props = defineProps({
   grow: {
     type: Boolean,
     default: false
+  },
+
+  cls: {
+    type: String,
+    default: ''
   }
 });
 
@@ -43,7 +48,8 @@ useEventListener(window, 'keyup', handleKeyup);
 const classNames = computed(() => ({
   modal: true,
   [`modal--${props.align}`]: props.align,
-  ['modal--grow']: props.grow
+  ['modal--grow']: props.grow,
+  [`modal--${props.cls}`]: props.cls
 }));
 
 const styles = computed(() => ({

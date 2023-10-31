@@ -28,6 +28,11 @@ const props = defineProps({
   grow: {
     type: Boolean,
     default: false
+  },
+
+  cls: {
+    type: String,
+    default: ''
   }
 });
 
@@ -42,6 +47,7 @@ const close = () => emit('close');
     :close-btn="props.closeBtn"
     :width="props.width"
     :grow="props.grow"
+    :cls="props.cls"
     @close="close"
   >
     <slot />
