@@ -35,6 +35,8 @@ defineProps({
 }
 
 .link {
+  cursor: pointer;
+
   display: block;
 
   margin-top: 6px;
