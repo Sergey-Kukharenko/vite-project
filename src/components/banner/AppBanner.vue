@@ -1,7 +1,4 @@
 <script setup>
-import { useMq } from 'vue3-mq';
-import { computed } from 'vue';
-
 defineProps({
   banner: {
     type: Object,
@@ -9,14 +6,19 @@ defineProps({
   }
 });
 
-const mq = useMq();
-const getDevice = computed(() => (mq.current === 'xs' || mq.current === 'sm' ? 'mobile' : 'desktop'));
+const mediaQueries = {
+  desktop: '(min-width: 768px)',
+  mobile: '(max-width: 767px)'
+};
 </script>
 
 <template>
-  <div class="layout layout--desktop banner-card">
-    <img :src="banner.img[getDevice]" alt="" />
-  </div>
+  <a :href="banner.href" class="layout layout--desktop banner-card">
+    <picture>
+      <source v-for="(value, key) in banner.img" :key="value" :media="mediaQueries[key]" :srcset="value" />
+      <img :src="banner.img.desktop" :alt="banner.desktop" />
+    </picture>
+  </a>
 </template>
 
 <style lang="scss" scoped>
@@ -28,6 +30,8 @@ const getDevice = computed(() => (mq.current === 'xs' || mq.current === 'sm' ? '
   @include lt-md {
     min-height: 384px;
   }
+
+  display: block;
 
   & img {
     display: block;

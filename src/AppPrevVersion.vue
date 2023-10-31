@@ -25,12 +25,12 @@ const banner = ref(dataBanner);
 </script>
 
 <template>
+  <app-banner :banner="banner" />
   <app-quick-links />
   <app-series :title="series.title" :slides="series.slides" />
   <app-brands :title="brands.title" :slides="brands.slides" />
   <app-section-cards :title="listCards.title" :list="listCards.list" :button="listCards.button" />
   <app-selections :title="selections.title" :slides="selections.slides" />
-  <app-banner :banner="banner" />
   <app-constructions-toys />
   <app-subscribe />
   <app-footer />
