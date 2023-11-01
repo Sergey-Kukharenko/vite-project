@@ -16,6 +16,7 @@ const { categories } = ref(dateSearch).value;
 .header-search-categories {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   row-gap: 20px;
 }
 </style>

@@ -61,6 +61,41 @@ export default {
         title: 'LEGO  Marvel  71039',
         name: 'Минифигурки Marvel',
         price: '699 ₽'
+      },
+      {
+        href: null,
+        img: 'https://placehold.co/90X70.jpg',
+        title: 'LEGO Harry Potter 76419',
+        name: 'Замок и территория Хогвартс',
+        price: '28 999 ₽'
+      },
+      {
+        href: null,
+        img: 'https://placehold.co/90X70.jpg',
+        title: 'LEGO Коллекционные наборы 10316',
+        name: 'Властелин колец: Ривенделл',
+        price: '79 999 ₽'
+      },
+      {
+        href: null,
+        img: 'https://placehold.co/90X70.jpg',
+        title: 'LEGO Super Heroes 76261',
+        name: 'Финальная битва Человека-паука',
+        price: '16 999 ₽'
+      },
+      {
+        href: null,
+        img: 'https://placehold.co/90X70.jpg',
+        title: 'LEGO Коллекционные наборы 43230',
+        name: 'Камера памяти Уолта Диснея',
+        price: '17 999 ₽'
+      },
+      {
+        href: null,
+        img: 'https://placehold.co/90X70.jpg',
+        title: 'IM.Master 8039_MK',
+        name: 'Robot',
+        price: '5 499 ₽'
       }
     ]
   }
