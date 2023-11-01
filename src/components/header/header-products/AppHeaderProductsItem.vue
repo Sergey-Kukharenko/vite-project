@@ -31,8 +31,6 @@ defineProps({
   align-items: flex-start;
 
   color: inherit;
-
-  outline: 1px solid;
 }
 
 img {

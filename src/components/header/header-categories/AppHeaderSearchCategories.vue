@@ -18,5 +18,7 @@ const { categories } = ref(dateSearch).value;
   flex-direction: column;
   flex-shrink: 0;
   row-gap: 20px;
+
+  margin-top: 49px;
 }
 </style>

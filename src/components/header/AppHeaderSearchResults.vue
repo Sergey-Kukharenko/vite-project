@@ -14,9 +14,5 @@ import AppHeaderProducts from '@/components/header/header-products/AppHeaderProd
 .header-search-results {
   display: flex;
   column-gap: 25px;
-
-  & > div {
-    outline: 1px solid;
-  }
 }
 </style>
