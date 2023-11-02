@@ -40,7 +40,7 @@ const onPageChange = (event) => {
     </form>
 
     <app-modal :visible="isModalVisible" align="start" :close-btn="false" grow cls="search" @close="closeModal">
-      <app-header-search-results />
+      <app-header-search-results :search="search.trim()" />
     </app-modal>
   </div>
 </template>
