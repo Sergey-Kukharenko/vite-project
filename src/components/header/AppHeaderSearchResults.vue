@@ -5,22 +5,17 @@ import AppHeaderTags from '@/components/header/AppHeaderTags.vue';
 
 import { ref } from 'vue';
 import dataSearch from '@/data/search.js';
+import { useSearchStore } from '@/stores/useSearchStore.js';
 
 const { tags } = ref(dataSearch).value;
-
-defineProps({
-  search: {
-    type: String,
-    default: ''
-  }
-});
+const store = useSearchStore();
 </script>
 
 <template>
   <div class="layout layout--desktop layout--mobile header-search-results">
-    <app-header-tags v-if="search" :tags="tags" />
-    <app-header-search-categories :search="search" />
-    <app-header-products :search="search" />
+    <app-header-tags v-if="store.query" :tags="tags" />
+    <app-header-search-categories :search="store.query" />
+    <app-header-products :search="store.query" />
   </div>
 </template>
 

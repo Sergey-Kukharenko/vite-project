@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 import { Vue3Mq } from 'vue3-mq';
 
 import './assets/css/fonts.css';
@@ -9,6 +10,7 @@ import './style.css';
 import App from './App.vue';
 
 createApp(App)
+  .use(createPinia())
   .use(Vue3Mq, {
     breakpoints: {
       xs: 0,
