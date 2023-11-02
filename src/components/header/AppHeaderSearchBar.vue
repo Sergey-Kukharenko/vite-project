@@ -1,12 +1,9 @@
 <script setup>
 import { ref } from 'vue';
-
-import { disableScroll, enableScroll } from '@/helpers/scrollLock.js';
 import AppModal from '@/components/shared/modal/AppModal.vue';
 import AppHeaderSearchResults from '@/components/header/AppHeaderSearchResults.vue';
-import AppHeaderSearch from '@/components/header/AppHeaderSearch.vue';
-
-const search = ref('');
+import AppHeaderSearch from '@/components/header/header-search/AppHeaderSearch.vue';
+import { disableScroll, enableScroll } from '@/helpers/scrollLock.js';
 
 const isModalVisible = ref(true);
 

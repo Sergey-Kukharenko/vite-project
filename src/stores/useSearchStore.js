@@ -11,6 +11,10 @@ import { ref } from 'vue';
 //   }
 // });
 
+// const result = await axios.get(`https://hn.algolia.com/api/v1/search?query=${search.value}`);
+//
+// console.log(result);
+
 export const useSearchStore = defineStore('search', () => {
   const query = ref('');
 

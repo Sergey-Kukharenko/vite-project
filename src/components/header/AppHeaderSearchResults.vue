@@ -1,9 +1,8 @@
 <script setup>
+import { ref } from 'vue';
 import AppHeaderSearchCategories from '@/components/header/header-categories/AppHeaderSearchCategories.vue';
 import AppHeaderProducts from '@/components/header/header-products/AppHeaderProducts.vue';
 import AppHeaderTags from '@/components/header/AppHeaderTags.vue';
-
-import { ref } from 'vue';
 import dataSearch from '@/data/search.js';
 import { useSearchStore } from '@/stores/useSearchStore.js';
 
