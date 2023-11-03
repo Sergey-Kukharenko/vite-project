@@ -17,7 +17,7 @@ const props = defineProps({
 
   closeBtn: {
     type: Boolean,
-    required: true
+    default: true
   },
 
   width: {

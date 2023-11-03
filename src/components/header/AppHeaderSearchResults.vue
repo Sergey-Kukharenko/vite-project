@@ -15,6 +15,15 @@ const store = useSearchStore();
     <app-header-tags v-if="store.query" :tags="tags" />
     <app-header-search-categories :search="store.query" />
     <app-header-products :search="store.query" />
+
+    <h1 v-if="store.error">{{ store.error }}</h1>
+    <h1 v-if="store.loading">loading ...</h1>
+    <div v-else>
+      <div v-for="item in store.result" :key="item" style="margin: 1em">
+        {{ item.author }}
+        {{ item.title }}
+      </div>
+    </div>
   </div>
 </template>
 

@@ -5,7 +5,7 @@ import AppHeaderSearchResults from '@/components/header/AppHeaderSearchResults.v
 import AppHeaderSearch from '@/components/header/header-search/AppHeaderSearch.vue';
 import { disableScroll, enableScroll } from '@/helpers/scrollLock.js';
 
-const isModalVisible = ref(true);
+const isModalVisible = ref(false);
 
 const openModal = () => {
   isModalVisible.value = true;

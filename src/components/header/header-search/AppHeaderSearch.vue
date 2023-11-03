@@ -1,7 +1,7 @@
 <script setup>
+import { computed } from 'vue';
 import AppIcon from '@/components/shared/AppIcon.vue';
 import { useSearchStore } from '@/stores/useSearchStore.js';
-import { computed } from 'vue';
 
 defineEmits(['openModal']);
 
@@ -22,6 +22,7 @@ const onSubmit = () => {
 };
 
 const onPageChange = (event) => {
+  search.value = '';
   event.target.blur();
 };
 </script>
