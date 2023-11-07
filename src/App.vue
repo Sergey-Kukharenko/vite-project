@@ -23,7 +23,7 @@ const store = useSearchStore();
     <!--      <div v-for="item in store.data.hits" :key="item">{{ item.title }}</div>-->
     <!--    </div>-->
 
-    <h3>{{ store.data.length }}</h3>
+    <h3>{{ store.data?.hits?.length }}</h3>
     <!--    <h1 v-if="store.error">{{ store.error }}</h1>-->
   </div>
 </template>

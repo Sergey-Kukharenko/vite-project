@@ -6,7 +6,7 @@ import axios from 'axios';
 export const useSearchStore = defineStore('search', () => {
   const query = ref('');
 
-  const data = ref([]);
+  const data = ref({});
   const loading = ref(null);
   const error = ref(null);
 
@@ -21,7 +21,8 @@ export const useSearchStore = defineStore('search', () => {
         query: payload
       })
       .then((response) => {
-        data.value = response.data.hits;
+        data.value = response.data;
+        console.log(response.data);
       })
       .catch((e) => {
         error.value = e.message;
