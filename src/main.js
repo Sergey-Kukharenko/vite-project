@@ -1,11 +1,7 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
+import './assets/css/style.css';
 import { Vue3Mq } from 'vue3-mq';
-
-import './assets/css/fonts.css';
-import './assets/css/reset.css';
-import './assets/css/normalize.css';
-import './style.css';
 
 import App from './App.vue';
 

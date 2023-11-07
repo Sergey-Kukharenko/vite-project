@@ -1,7 +1,7 @@
 <script setup>
 import { computed, reactive } from 'vue';
 import { useVuelidate } from '@vuelidate/core';
-import { required, email, helpers } from '@vuelidate/validators';
+import { email, helpers, required } from '@vuelidate/validators';
 
 import AppInput from '@/components/shared/input/AppInput.vue';
 import AppBtn from '@/components/shared/btn/AppBtn.vue';

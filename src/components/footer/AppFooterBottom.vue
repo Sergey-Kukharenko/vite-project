@@ -76,6 +76,5 @@ const { copyright, files, logo, payments, brands } = ref(dataFooter).value;
 
 .icon {
   width: 150px;
-  height: 24px;
 }
 </style>

@@ -1,12 +1,9 @@
 <script setup>
-import { computed } from "vue";
-import { useMq } from "vue3-mq";
-
 const { slide } = defineProps({
   slide: {
     type: Object,
-    default: () => ({}),
-  },
+    default: () => ({})
+  }
 });
 </script>
 

@@ -1,6 +1,5 @@
 <script setup>
-import { computed } from 'vue';
-import { useMq } from 'vue3-mq';
+import AppImage from '@/components/shared/AppImage.vue';
 
 defineProps({
   slide: {
@@ -8,15 +7,11 @@ defineProps({
     default: () => ({})
   }
 });
-
-const mq = useMq();
-
-const getDevice = computed(() => (mq.current === 'xs' || mq.current === 'sm' ? 'mobile' : 'desktop'));
 </script>
 
 <template>
   <a class="brands-card">
-    <img :src="slide.img[getDevice]" alt="" />
+    <app-image :img="slide.img" />
   </a>
 </template>
 
@@ -29,10 +24,5 @@ const getDevice = computed(() => (mq.current === 'xs' || mq.current === 'sm' ? '
 
   border: 1px solid #dcdcdc;
   border-radius: 10px;
-
-  & img {
-    display: block;
-    max-width: 100%;
-  }
 }
 </style>

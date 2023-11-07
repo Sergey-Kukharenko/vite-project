@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue';
-
 import AppFooterSection from '@/components/footer/footer-sections/AppFooterSection.vue';
 import dataFooter from '@/data/footer.js';
 

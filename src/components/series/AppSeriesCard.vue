@@ -1,5 +1,5 @@
 <script setup>
-const { slide } = defineProps({
+defineProps({
   slide: {
     type: Object,
     default: () => ({})

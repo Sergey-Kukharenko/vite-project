@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-import { FreeMode, Pagination, Navigation, Mousewheel, Keyboard } from 'swiper/modules';
+import { FreeMode, Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules';
 
 const props = defineProps({
   options: {

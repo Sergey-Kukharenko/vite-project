@@ -1,3 +1,7 @@
+@import url("fonts.css");
+@import url("reset.css");
+@import url("normalize.css");
+
 :root {
   --circle-bold: 'Circe_Bold';
   --circle-regular: 'Circe_Regular';
@@ -150,6 +154,7 @@ input[type='number'] {
 .row-example > * {
   margin: 0.2em;
 }
+
 
 
 

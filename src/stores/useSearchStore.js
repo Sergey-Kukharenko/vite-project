@@ -5,29 +5,23 @@ import axios from 'axios';
 
 export const useSearchStore = defineStore('search', () => {
   const query = ref('');
-  const result = ref([]);
+
+  const data = ref([]);
   const loading = ref(null);
   const error = ref(null);
 
   const setQuery = async (payload) => {
     query.value = payload;
 
-    const url = `https://hn.algolia.com/api/v1/search`;
-    // const { data } = await axios.get(url, {
-    //   query: payload
-    // });
-    //
-    // result.value = data.hits;
-
     loading.value = true;
     error.value = '';
 
     await axios
-      .get(url, {
+      .get('https://hn.algolia.com/api/v1/search', {
         query: payload
       })
-      .then(({ data }) => {
-        result.value = data.hits;
+      .then((response) => {
+        data.value = response.data.hits;
       })
       .catch((e) => {
         error.value = e.message;
@@ -38,7 +32,7 @@ export const useSearchStore = defineStore('search', () => {
   return {
     query,
     setQuery,
-    result,
+    data,
     loading,
     error
   };
