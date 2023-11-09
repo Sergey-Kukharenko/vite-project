@@ -11,16 +11,13 @@ defineProps({
 
 <template>
   <div class="list-cards">
-    <div v-for="(card, idx) in list" :key="idx" class="item">
-      <app-card :card="card" />
-    </div>
+    <app-card v-for="(card, idx) in list" :key="idx" :card="card" />
   </div>
 </template>
 
 <style lang="scss" scoped>
 .list-cards {
   display: flex;
-  align-items: center;
   justify-content: center;
 
   @include gt-sm {
@@ -45,10 +42,6 @@ defineProps({
     @include lt-md {
       display: none;
     }
-  }
-
-  & .item {
-    flex: 0 0 288px;
   }
 }
 </style>

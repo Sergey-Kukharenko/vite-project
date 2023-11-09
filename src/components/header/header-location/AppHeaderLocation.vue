@@ -20,7 +20,7 @@ const closeModal = () => {
 
 <template>
   <app-header-location-btn @click="openModal" />
-  <app-modal :visible="isModalVisible" align="start" width="645" @close="closeModal">
+  <app-modal :visible="isModalVisible" align="start" width="628" @close="closeModal">
     <app-header-cities @close="closeModal" />
   </app-modal>
 </template>

@@ -1,6 +1,7 @@
 <script setup>
 import AppBtn from '@/components/shared/btn/AppBtn.vue';
 import AppIcon from '@/components/shared/AppIcon.vue';
+import AppImage from '@/components/shared/AppImage.vue';
 
 defineProps({
   card: {
@@ -13,15 +14,17 @@ defineProps({
 <template>
   <div class="card">
     <div class="figure">
-      <img :src="card.img" alt="" class="img" />
+      <app-image :img="card.img" />
     </div>
     <div class="figcaption">
       <div class="group-text">
         <div class="vendor-code">{{ card.vendor_code }}</div>
         <div class="title">{{ card.title }}</div>
-        <div class="price">{{ card.price.current }}</div>
       </div>
-      <app-btn class="card__btn" font-size="small">Купить</app-btn>
+      <div class="group-form">
+        <div class="price">{{ card.price.current }}</div>
+        <app-btn class="btn" cls="in-card" font-size="small">Купить</app-btn>
+      </div>
       <div class="controls">
         <div class="view">
           <app-icon :name="card.view.icon" />

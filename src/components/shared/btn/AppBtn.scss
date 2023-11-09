@@ -126,4 +126,14 @@
       }
     }
   }
+
+  &--in-card {
+    @include gt-sm {
+      min-width: 200px;
+    }
+
+    @include lt-md {
+      min-width: 200px;
+    }
+  }
 }

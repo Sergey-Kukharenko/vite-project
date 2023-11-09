@@ -31,25 +31,22 @@ const onCLick = (item) => {
   grid-auto-flow: column;
   grid-template-columns: auto;
   grid-template-rows: repeat(8, auto);
-  row-gap: 3px;
+  column-gap: 10px;
+
+  max-width: 480px;
 }
 
 .item {
   cursor: pointer;
 
-  padding: 0 15px;
-
   font-family: var(--rotonda-c);
   font-size: 16px;
-  line-height: 30px;
-  color: #000000;
-
-  border-radius: 15px;
+  line-height: 33px;
+  color: black;
 
   &:hover,
   &.active {
-    background-color: var(--yellow);
-    box-shadow: 0 2px 3px #d0d0d0;
+    font-weight: 700;
   }
 }
 </style>

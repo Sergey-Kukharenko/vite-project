@@ -1,40 +1,33 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
-
 import axios from 'axios';
 
 export const useSearchStore = defineStore('search', () => {
   const query = ref('');
 
+  const isLoading = ref(null);
   const data = ref({});
-  const loading = ref(null);
-  const error = ref(null);
+  const error = ref('');
 
   const setQuery = async (payload) => {
     query.value = payload;
 
-    loading.value = true;
+    isLoading.value = true;
     error.value = '';
 
+    const url = 'https://hn.algolia.com/api/v1/search';
     await axios
-      .get('https://hn.algolia.com/api/v1/search', {
-        query: payload
-      })
-      .then((response) => {
-        data.value = response.data;
-        console.log(response.data);
-      })
-      .catch((e) => {
-        error.value = e.message;
-      })
-      .finally(() => (loading.value = false));
+      .get(url, { query: payload })
+      .then((response) => (data.value = response.data))
+      .catch((e) => (error.value = e.message))
+      .finally(() => (isLoading.value = false));
   };
 
   return {
     query,
     setQuery,
     data,
-    loading,
+    isLoading,
     error
   };
 });

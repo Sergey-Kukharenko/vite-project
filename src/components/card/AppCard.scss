@@ -1,13 +1,61 @@
 .card {
   overflow: hidden;
+  flex: 0 0 288px;
 
   box-sizing: border-box;
-  max-width: 290px;
 
   border: 1px solid #dcdcdc;
   border-radius: 10px;
 
-  &__btn {
+  &:first-child {
+    @include gt-sm {
+      flex: 0 0 600px;
+    }
+
+    @include gt-sm {
+      & .figcaption {
+        &:after {
+          content: '';
+          clear: both;
+          display: table;
+        }
+
+        & .group-text,
+        & .controls {
+          float: left;
+          justify-content: flex-start;
+          width: 64%;
+          text-align: left;
+        }
+
+        & .availability {
+          margin-left: 20px;
+        }
+
+        & .group-form {
+          float: right;
+        }
+      }
+
+      & .title {
+        justify-content: flex-start;
+        min-height: 40px;
+        line-height: 20px;
+      }
+
+      & .btn {
+        @include gt-sm {
+          margin: 10px 0 0;
+        }
+
+        @include lt-md {
+          margin-top: 17px;
+        }
+      }
+    }
+  }
+
+  & .btn {
     @include gt-sm {
       margin: 10px 0 15px;
     }
@@ -22,18 +70,12 @@
   min-height: 218px;
 }
 
-.img {
-  display: block;
-  width: 100%;
-}
-
 .figcaption {
   padding: 15px;
   text-align: center;
 }
 
 .vendor-code {
-
   @include gt-sm {
     font-size: 14px;
     line-height: 20px;
@@ -48,7 +90,6 @@
 }
 
 .title {
-
   @include gt-sm {
     font-size: 16px;
     line-height: 22px;
@@ -68,7 +109,6 @@
 }
 
 .price {
-
   @include gt-sm {
     font-size: 22px;
     line-height: 30px;
@@ -95,7 +135,6 @@
 }
 
 .controls {
-
   @include lt-md {
     display: none;
   }
@@ -110,6 +149,7 @@
 }
 
 .group-text {
-  display: flex;
-  flex-direction: column;
+}
+
+.group-form {
 }
