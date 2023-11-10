@@ -16,7 +16,7 @@ const onSubmit = () => {
   <div class="header-cities">
     <div class="title">Выберите город</div>
     <form id="city-search-form" @submit.prevent="onSubmit">
-      <app-input v-model="city" grow placeholder="Поиск города" />
+      <app-input v-model="city" grow placeholder="Поиск города" icon="magnifying-glass" align-icon="start" />
     </form>
     <app-header-cities-list />
     <app-btn grow form="city-search-form">Выбрать город</app-btn>
@@ -33,5 +33,10 @@ const onSubmit = () => {
   font-size: 22px;
   font-weight: 700;
   line-height: 30px;
+}
+
+:deep(.icon) {
+  fill: var(--icon-search);
+  transition: fill 0.25s;
 }
 </style>

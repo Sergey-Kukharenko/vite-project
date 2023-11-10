@@ -28,7 +28,7 @@ input {
 }
 
 .icon {
-  fill: #777777;
+  fill: var(--icon-search);
   transition: fill 0.25s;
 }
 

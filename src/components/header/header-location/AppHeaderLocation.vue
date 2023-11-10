@@ -5,7 +5,7 @@ import AppHeaderCities from '@/components/header/header-cities/AppHeaderCities.v
 import AppModal from '@/components/shared/modal/AppModal.vue';
 import { disableScroll, enableScroll } from '@/helpers/scrollLock.js';
 
-const isModalVisible = ref(false);
+const isModalVisible = ref(true);
 
 const openModal = () => {
   isModalVisible.value = true;
