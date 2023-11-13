@@ -1,11 +1,13 @@
 <script setup>
-import AppHeader from '@/components/header/AppHeader.vue';
-import AppHeaderMenu from '@/components/menu/AppMenu.vue';
+import { ref } from 'vue';
+import AppBanner from '@/components/banner/AppBanner.vue';
+import dataBanner from '@/data/banner.js';
+
+const banner = ref(dataBanner);
 </script>
 
 <template>
-  <app-header />
-  <app-header-menu />
+  <app-banner :banner="banner" />
 </template>
 
 <style lang="scss">

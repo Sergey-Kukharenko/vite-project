@@ -16,7 +16,7 @@ import AppHeaderCart from '@/components/header/header-cart/AppHeaderCart.vue';
 <style scoped lang="scss">
 .menu {
   position: sticky;
-  z-index: 1;
+  z-index: 2;
   top: 0;
 
   width: 100%;

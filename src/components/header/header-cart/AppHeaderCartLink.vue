@@ -1,8 +1,7 @@
 <script setup>
-import AppIcon from '@/components/shared/AppIcon.vue';
-
-import { useCartStore } from '@/stores/useCartStore.js';
 import { computed } from 'vue';
+import AppIcon from '@/components/shared/AppIcon.vue';
+import { useCartStore } from '@/stores/useCartStore.js';
 
 const store = useCartStore();
 

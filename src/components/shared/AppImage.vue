@@ -7,7 +7,8 @@ defineProps({
 });
 
 const mediaQueries = {
-  desktop: '(min-width: 768px)',
+  desktop: '(min-width: 1024px)',
+  tablet: '(max-width: 1023px) and (min-width: 768px)',
   mobile: '(max-width: 767px)'
 };
 </script>
