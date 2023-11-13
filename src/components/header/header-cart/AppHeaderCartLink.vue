@@ -1,19 +1,15 @@
 <script setup>
-import { computed } from 'vue';
 import AppIcon from '@/components/shared/AppIcon.vue';
 import { useCartStore } from '@/stores/useCartStore.js';
 
 const store = useCartStore();
-
-const count = computed(() => store.cart.length);
-const isCart = computed(() => !!count.value);
 </script>
 
 <template>
   <a class="header-cart-link">
     <div class="figure">
       <app-icon name="header-basket" />
-      <div v-if="isCart" class="header-cart-counter">{{ count }}</div>
+      <div v-if="store.isCart" class="header-cart-counter">{{ store.count }}</div>
     </div>
     Корзина
   </a>

@@ -1,13 +1,17 @@
 <script setup>
+import AppHeader from '@/components/header/AppHeader.vue';
+import AppMenu from '@/components/menu/AppMenu.vue';
+import AppSectionCards from '@/components/section-cards/app-section-cards.vue';
 import { ref } from 'vue';
-import AppBanner from '@/components/banner/AppBanner.vue';
-import dataBanner from '@/data/banner.js';
+import dataListCards from '@/data/list-cards.js';
 
-const banner = ref(dataBanner);
+const listCards = ref(dataListCards);
 </script>
 
 <template>
-  <app-banner :banner="banner" />
+  <app-header />
+  <app-menu />
+  <app-section-cards :title="listCards.title" :list="listCards.list" :button="listCards.button" />
 </template>
 
 <style lang="scss">
