@@ -2,6 +2,7 @@ export default {
   title: 'Лучшее на сегодня',
   list: [
     {
+      id: 0,
       img: {
         desktop: 'https://placehold.co/600X320.jpg',
         mobile: 'https://placehold.co/307X230.jpg'
@@ -19,9 +20,11 @@ export default {
       availability: {
         icon: 'map-point',
         label: 'Проверить наличие'
-      }
+      },
+      qty: 1
     },
     {
+      id: 1,
       img: {
         desktop: 'https://placehold.co/307X230.jpg'
       },
@@ -38,9 +41,11 @@ export default {
       availability: {
         icon: 'map-point',
         label: 'Проверить наличие'
-      }
+      },
+      qty: 1
     },
     {
+      id: 2,
       img: {
         desktop: 'https://placehold.co/307X230.jpg'
       },
@@ -57,9 +62,11 @@ export default {
       availability: {
         icon: 'map-point',
         label: 'Проверить наличие'
-      }
+      },
+      qty: 1
     },
     {
+      id: 3,
       img: {
         desktop: 'https://placehold.co/307X230.jpg'
       },
@@ -76,9 +83,11 @@ export default {
       availability: {
         icon: 'map-point',
         label: 'Проверить наличие'
-      }
+      },
+      qty: 1
     },
     {
+      id: 4,
       img: {
         desktop: 'https://placehold.co/307X230.jpg'
       },
@@ -95,9 +104,11 @@ export default {
       availability: {
         icon: 'map-point',
         label: 'Проверить наличие'
-      }
+      },
+      qty: 1
     },
     {
+      id: 5,
       img: {
         desktop: 'https://placehold.co/307X230.jpg'
       },
@@ -114,9 +125,11 @@ export default {
       availability: {
         icon: 'map-point',
         label: 'Проверить наличие'
-      }
+      },
+      qty: 1
     },
     {
+      id: 6,
       img: {
         desktop: 'https://placehold.co/307X230.jpg'
       },
@@ -133,7 +146,8 @@ export default {
       availability: {
         icon: 'map-point',
         label: 'Проверить наличие'
-      }
+      },
+      qty: 1
     }
   ],
   button: {

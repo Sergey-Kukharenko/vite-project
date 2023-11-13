@@ -80,10 +80,10 @@ const classNames = computed(() => ({
   <div :class="classNames">
     <label>
       <input
-        :value="props.modelValue"
-        :type="props.type"
-        :placeholder="props.placeholder"
-        :disabled="props.disabled"
+        :value="modelValue"
+        :type="type"
+        :placeholder="placeholder"
+        :disabled="disabled"
         @input="$emit('update:modelValue', $event.target.value)"
       />
       <app-icon v-if="icon" :name="icon" />

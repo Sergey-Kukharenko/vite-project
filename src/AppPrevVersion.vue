@@ -16,6 +16,8 @@ import dataBanner from '@/data/banner.js';
 import AppConstructionsToys from '@/components/сonstructions-toys/AppConstructionsToys.vue';
 import AppSubscribe from '@/components/subscribe/AppSubscribe.vue';
 import AppFooter from '@/components/footer/AppFooter.vue';
+import AppHeader from '@/components/header/AppHeader.vue';
+import AppHeaderMenu from '@/components/menu/AppMenu.vue';
 
 const series = ref(dataSeries);
 const brands = ref(dataBrands);
@@ -25,6 +27,8 @@ const banner = ref(dataBanner);
 </script>
 
 <template>
+  <app-header />
+  <app-header-menu />
   <app-banner :banner="banner" />
   <app-quick-links />
   <app-series :title="series.title" :slides="series.slides" />

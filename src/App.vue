@@ -1,11 +1,11 @@
 <script setup>
 import AppHeader from '@/components/header/AppHeader.vue';
-import AppSubscribe from '@/components/subscribe/AppSubscribe.vue';
+import AppHeaderMenu from '@/components/menu/AppMenu.vue';
 </script>
 
 <template>
   <app-header />
-  <app-subscribe />
+  <app-header-menu />
 </template>
 
 <style lang="scss">
