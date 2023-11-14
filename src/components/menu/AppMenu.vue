@@ -1,13 +1,15 @@
 <script setup>
-import AppHeaderCart from '@/components/header/header-cart/AppHeaderCart.vue';
+import AppMenuFavorite from '@/components/menu/menu-favorite/AppMenuFavorite.vue';
+import AppMenuCart from '@/components/menu/menu-cart/AppMenuCart.vue';
 </script>
 
 <template>
   <div class="menu">
     <div class="layout layout--desktop layout--mobile container">
       <div></div>
-      <div>
-        <app-header-cart />
+      <div class="menu-items">
+        <app-menu-favorite />
+        <app-menu-cart />
       </div>
     </div>
   </div>
@@ -31,5 +33,10 @@ import AppHeaderCart from '@/components/header/header-cart/AppHeaderCart.vue';
   align-items: center;
   justify-content: space-between;
   height: 100%;
+}
+
+.menu-items {
+  display: flex;
+  column-gap: 10px;
 }
 </style>

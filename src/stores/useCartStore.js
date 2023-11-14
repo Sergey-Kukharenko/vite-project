@@ -3,10 +3,9 @@ import { computed, ref } from 'vue';
 import { findObjByKey } from '@/helpers/index.js';
 
 export const useCartStore = defineStore('cart', () => {
-  const cart = ref([]);
+  const cart = ref([{}]);
 
   const count = computed(() => cart.value.length);
-  const isCart = computed(() => !!count.value);
 
   const addToCart = (payload) => {
     const sameObj = findObjByKey(cart.value, payload, 'id');
@@ -24,7 +23,6 @@ export const useCartStore = defineStore('cart', () => {
   return {
     cart,
     count,
-    isCart,
     addToCart,
     removeFromCart
   };

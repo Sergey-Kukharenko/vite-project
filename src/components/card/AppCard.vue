@@ -5,6 +5,7 @@ import AppImage from '@/components/shared/AppImage.vue';
 import { useCartStore } from '@/stores/useCartStore.js';
 
 const store = useCartStore();
+const { addToCart } = store;
 
 defineProps({
   card: {
@@ -26,9 +27,9 @@ defineProps({
       </div>
       <div class="group-form">
         <div class="price">{{ card.price.current }}</div>
-        <app-btn class="btn" cls="in-card" font-size="small" @click="store.addToCart(card)">Купить</app-btn>
+        <app-btn class="btn" cls="in-card" font-size="small" @click="addToCart(card)">Купить</app-btn>
       </div>
-      <div class="controls" @click="store.removeFromCart(card)">
+      <div class="controls">
         <div class="view">
           <app-icon :name="card.view.icon" />
           <div class="controls__label">{{ card.view.label }}</div>
