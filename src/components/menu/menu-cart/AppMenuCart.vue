@@ -12,8 +12,3 @@ const { count } = storeToRefs(store);
     <app-menu-link icon="menu-basket" :count="count">Корзина</app-menu-link>
   </div>
 </template>
-
-<style scoped lang="scss">
-.menu-cart {
-}
-</style>

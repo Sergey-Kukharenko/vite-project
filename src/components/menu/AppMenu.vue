@@ -1,5 +1,6 @@
 <script setup>
 import AppMenuFavorite from '@/components/menu/menu-favorite/AppMenuFavorite.vue';
+import AppMenuProfile from '@/components/menu/menu-profile/AppMenuProfile.vue';
 import AppMenuCart from '@/components/menu/menu-cart/AppMenuCart.vue';
 </script>
 
@@ -9,6 +10,7 @@ import AppMenuCart from '@/components/menu/menu-cart/AppMenuCart.vue';
       <div></div>
       <div class="menu-items">
         <app-menu-favorite />
+        <app-menu-profile />
         <app-menu-cart />
       </div>
     </div>

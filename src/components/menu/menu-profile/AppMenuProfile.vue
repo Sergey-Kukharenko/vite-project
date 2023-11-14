@@ -3,7 +3,7 @@ import AppMenuLink from '@/components/menu/AppMenuLink.vue';
 </script>
 
 <template>
-  <div class="menu-favorite">
-    <app-menu-link icon="menu-favorite" :count="1" />
+  <div class="menu-profile">
+    <app-menu-link icon="menu-profile" />
   </div>
 </template>
