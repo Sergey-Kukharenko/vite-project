@@ -6,18 +6,23 @@ import AppMenuCart from '@/components/menu/menu-cart/AppMenuCart.vue';
 
 import { useMq } from 'vue3-mq';
 import { computed, defineAsyncComponent } from 'vue';
+import AppMenuDrawer from '@/components/menu/menu-drawer/AppMenuDrawer.vue';
 
 const AppMenuSearch = defineAsyncComponent(() => import('@/components/menu/menu-search/AppMenuSearch.vue'));
 const mq = useMq();
-const isNotDesktop = computed(() => mq.current !== 'xl');
+const isDesktop = computed(() => mq.current === 'xl');
+const isMobile = computed(() => !isDesktop.value);
 </script>
 
 <template>
   <div class="menu">
     <div class="layout layout--desktop layout--mobile container">
-      <div></div>
+      <div v-if="isDesktop"></div>
+      <div v-if="isMobile">
+        <app-menu-drawer> menu</app-menu-drawer>
+      </div>
       <div class="menu-items">
-        <app-menu-search v-if="isNotDesktop" />
+        <app-menu-search v-if="isMobile" />
         <app-menu-compare />
         <app-menu-favorite />
         <app-menu-profile />

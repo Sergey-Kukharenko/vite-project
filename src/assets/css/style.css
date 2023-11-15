@@ -146,6 +146,13 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+}
+
 .row-example {
   display: flex;
   align-items: center;

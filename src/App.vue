@@ -6,11 +6,10 @@ import { useMq } from 'vue3-mq';
 
 const mq = useMq();
 const isDesktop = computed(() => mq.current === 'xl');
-console.log(isDesktop);
 </script>
 
 <template>
-  <app-header />
+  <app-header v-if="isDesktop" />
   <app-menu />
 </template>
 
