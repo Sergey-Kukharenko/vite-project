@@ -1,0 +1,117 @@
+.overlay {
+  position: fixed;
+  z-index: 3;
+  left: -100%;
+
+  width: 100vw;
+
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.7);
+
+  transition: opacity 0.25s ease 0s,
+  transform 0s ease 0.25s;
+}
+
+.container {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  transform: translateX(-101%);
+
+  width: 100%;
+  height: 0;
+
+  transition: transform 0.25s ease 0s;
+}
+
+.inner {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 320px;
+
+  background: #fff;
+}
+
+.overlay, .inner {
+  top: 50px;
+  height: calc(100vh - 50px);
+}
+
+.burger {
+  cursor: pointer;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  width: 18px;
+
+  & span,
+  &:before,
+  &:after {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &:first-child {
+      transform-origin: 0 0;
+    }
+
+    &:last-child {
+      bottom: 0;
+
+    }
+  }
+
+  &:before,
+  &:after {
+    content: '';
+  }
+
+  &:before {
+    transform-origin: 0 0;
+  }
+
+  &:after {
+    transform-origin: 0 100%;
+  }
+}
+
+.drawer {
+  &.active {
+    & .burger {
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+
+      & span {
+        transform: translate(-30%, 0px);
+        opacity: 0;
+      }
+    }
+
+    & .overlay {
+      cursor: pointer;
+      transform: translateX(100%);
+      opacity: 1;
+      transition: opacity 0.25s ease 0s,
+      transform 0s ease 0s;
+    }
+
+    & .container {
+      transform: translateX(0);
+      transition: transform 0.25s ease 0s;
+    }
+  }
+}

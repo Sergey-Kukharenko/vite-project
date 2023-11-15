@@ -3,10 +3,10 @@ import AppMenuCompare from '@/components/menu/menu-compare/AppMenuCompare.vue';
 import AppMenuFavorite from '@/components/menu/menu-favorite/AppMenuFavorite.vue';
 import AppMenuProfile from '@/components/menu/menu-profile/AppMenuProfile.vue';
 import AppMenuCart from '@/components/menu/menu-cart/AppMenuCart.vue';
+import AppMenuDrawer from '@/components/menu/menu-drawer/AppMenuDrawer.vue';
 
 import { useMq } from 'vue3-mq';
 import { computed, defineAsyncComponent } from 'vue';
-import AppMenuDrawer from '@/components/menu/menu-drawer/AppMenuDrawer.vue';
 
 const AppMenuSearch = defineAsyncComponent(() => import('@/components/menu/menu-search/AppMenuSearch.vue'));
 const mq = useMq();
