@@ -1,7 +1,15 @@
 <script setup>
+import AppMenuCompare from '@/components/menu/menu-compare/AppMenuCompare.vue';
 import AppMenuFavorite from '@/components/menu/menu-favorite/AppMenuFavorite.vue';
 import AppMenuProfile from '@/components/menu/menu-profile/AppMenuProfile.vue';
 import AppMenuCart from '@/components/menu/menu-cart/AppMenuCart.vue';
+
+import { useMq } from 'vue3-mq';
+import { computed, defineAsyncComponent } from 'vue';
+
+const AppMenuSearch = defineAsyncComponent(() => import('@/components/menu/menu-search/AppMenuSearch.vue'));
+const mq = useMq();
+const isNotDesktop = computed(() => mq.current !== 'xl');
 </script>
 
 <template>
@@ -9,6 +17,8 @@ import AppMenuCart from '@/components/menu/menu-cart/AppMenuCart.vue';
     <div class="layout layout--desktop layout--mobile container">
       <div></div>
       <div class="menu-items">
+        <app-menu-search v-if="isNotDesktop" />
+        <app-menu-compare />
         <app-menu-favorite />
         <app-menu-profile />
         <app-menu-cart />

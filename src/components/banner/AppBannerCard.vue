@@ -1,24 +1,18 @@
 <script setup>
-import { computed } from 'vue';
-import { useMq } from 'vue3-mq';
+import AppImage from '@/components/shared/AppImage.vue';
 
-const mq = useMq();
-
-const mapImagesDevices = {
-  xs: 'https://placehold.co/375X375.jpg',
-  sm: 'https://placehold.co/480X480.jpg',
-  md: 'https://placehold.co/768X768.jpg',
-  lg: 'https://placehold.co/1024X360.jpg',
-  xl: 'https://placehold.co/1280X402.jpg'
-};
-
-const getImg = computed(() => mapImagesDevices[mq.current]);
+defineProps({
+  banner: {
+    type: Object,
+    default: () => ({})
+  }
+});
 </script>
 
 <template>
-  <div class="banner-card">
-    <img :src="getImg" alt="" />
-  </div>
+  <a :href="banner.href" class="layout layout--desktop banner-card">
+    <app-image :img="banner.img" />
+  </a>
 </template>
 
 <style lang="scss" scoped>
@@ -31,9 +25,6 @@ const getImg = computed(() => mapImagesDevices[mq.current]);
     min-height: 384px;
   }
 
-  & img {
-    display: block;
-    max-width: 100%;
-  }
+  display: block;
 }
 </style>

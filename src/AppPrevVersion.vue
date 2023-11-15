@@ -11,7 +11,7 @@ import AppBrands from '@/components/brands/AppBrands.vue';
 import AppSectionCards from '@/components/section-cards/app-section-cards.vue';
 import AppSelections from '@/components/selections/AppSelections.vue';
 import dataSelections from '@/data/selections.js';
-import AppBanner from '@/components/banner/AppBanner.vue';
+import AppBannerCard from '@/components/banner/AppBannerCard.vue';
 import dataBanner from '@/data/banner.js';
 import AppConstructionsToys from '@/components/сonstructions-toys/AppConstructionsToys.vue';
 import AppSubscribe from '@/components/subscribe/AppSubscribe.vue';
@@ -29,7 +29,7 @@ const banner = ref(dataBanner);
 <template>
   <app-header />
   <app-header-menu />
-  <app-banner :banner="banner" />
+  <app-banner-card :banner="banner" />
   <app-quick-links />
   <app-series :title="series.title" :slides="series.slides" />
   <app-brands :title="brands.title" :slides="brands.slides" />
