@@ -7,6 +7,7 @@ import AppMenuDrawer from '@/components/menu/menu-drawer/AppMenuDrawer.vue';
 
 import { useMq } from 'vue3-mq';
 import { computed, defineAsyncComponent } from 'vue';
+import AppIcon from '@/components/shared/AppIcon.vue';
 
 const AppMenuSearch = defineAsyncComponent(() => import('@/components/menu/menu-search/AppMenuSearch.vue'));
 const mq = useMq();
@@ -18,8 +19,9 @@ const isMobile = computed(() => !isDesktop.value);
   <div class="menu">
     <div class="layout layout--desktop layout--mobile container">
       <div v-if="isDesktop"></div>
-      <div v-if="isMobile">
+      <div v-if="isMobile" class="menu-items">
         <app-menu-drawer> menu</app-menu-drawer>
+        <app-icon name="logo" />
       </div>
       <div class="menu-items">
         <app-menu-search v-if="isMobile" />
@@ -54,6 +56,18 @@ const isMobile = computed(() => !isDesktop.value);
 
 .menu-items {
   display: flex;
-  column-gap: 10px;
+  align-items: center;
+
+  &:first-child {
+    column-gap: 20px;
+  }
+
+  &:not(:first-child) {
+    column-gap: 10px;
+  }
+}
+
+.icon {
+  width: 172.174px;
 }
 </style>
