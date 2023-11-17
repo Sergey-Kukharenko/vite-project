@@ -19,7 +19,7 @@ const onSubmit = () => {
       <app-input v-model="city" grow placeholder="Поиск города" icon="magnifying-glass" align-icon="start" />
     </form>
     <app-header-cities-list />
-    <app-btn grow form="city-search-form">Выбрать город</app-btn>
+    <app-btn grow form="city-search-form" font-size="small">Применить</app-btn>
   </div>
 </template>
 <style lang="scss" scoped>

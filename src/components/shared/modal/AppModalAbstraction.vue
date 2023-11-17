@@ -8,7 +8,7 @@ const props = defineProps({
     type: String,
     default: 'center',
     validator(value) {
-      return ['start', 'center'].includes(value);
+      return ['start', 'center', 'end'].includes(value);
     }
   },
 
