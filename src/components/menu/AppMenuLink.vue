@@ -38,8 +38,8 @@ const isCount = computed(() => !!props.count);
   column-gap: 10px;
   align-items: center;
 
+  font-family: var(--lato-bold);
   font-size: 14px;
-  font-weight: 700;
   color: inherit;
 
   &:hover {

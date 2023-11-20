@@ -30,8 +30,8 @@ const onSubmit = () => {
 }
 
 .title {
+  font-family: var(--lato-bold);
   font-size: 22px;
-  font-weight: 700;
   line-height: 30px;
 }
 

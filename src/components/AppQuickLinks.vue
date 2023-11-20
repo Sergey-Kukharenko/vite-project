@@ -68,7 +68,6 @@ const quickLinks = ref(dataQuickLinks);
   margin-top: 7px;
 
   font-size: 12px;
-  font-weight: 400;
   line-height: normal;
   color: black;
 }

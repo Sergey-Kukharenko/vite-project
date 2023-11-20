@@ -17,16 +17,13 @@ const { link, time } = ref(headerData).value;
 </template>
 
 <style scoped lang="scss">
-.header-phone {
-}
-
 .link {
   display: flex;
   column-gap: 5px;
   align-items: center;
 
+  font-family: var(--lato-bold);
   font-size: 18px;
-  font-weight: 700;
   color: black;
 }
 

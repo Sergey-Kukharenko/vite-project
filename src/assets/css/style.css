@@ -7,6 +7,9 @@
   --circle-regular: 'Circe_Regular';
   --rotonda-c: 'RotondaC';
   --rotonda-bold: 'Rotonda-Bold';
+  --lato: 'Lato-Regular';
+  --lato-semibold: 'Lato-Semibold';
+  --lato-bold: 'Lato-Bold';
 
   --yellow: #ffc42e;
   --grey: #c4c4c4;
@@ -54,7 +57,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: 'Lato', sans-serif;
+  font-family: var(--lato);
   font-weight: 400;
   color: black;
 }

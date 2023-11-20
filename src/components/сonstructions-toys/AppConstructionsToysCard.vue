@@ -39,7 +39,7 @@ img {
 
 .title {
   font-size: 14px;
-  font-weight: 700;
+  font-family: var(--lato-bold);
   line-height: 16px;
   color: black;
 }

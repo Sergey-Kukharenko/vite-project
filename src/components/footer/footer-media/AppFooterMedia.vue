@@ -41,8 +41,8 @@ defineProps({
 }
 
 .title {
+  font-family: var(--lato-bold);
   font-size: 14px;
-  font-weight: 700;
   line-height: 17px;
   color: black;
 }

@@ -61,7 +61,7 @@ const onCLick = (item) => {
 
   &:hover,
   &.active {
-    font-weight: 700;
+    font-family: var(--lato-bold);
   }
 }
 </style>

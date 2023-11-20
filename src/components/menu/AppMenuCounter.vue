@@ -16,8 +16,8 @@ defineProps({
   width: 20px;
   height: 20px;
 
+  font-family: var(--lato-bold);
   font-size: 12px;
-  font-weight: 700;
   line-height: 20px;
   color: white;
   text-align: center;

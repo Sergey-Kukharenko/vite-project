@@ -63,8 +63,8 @@ img {
 .price {
   margin-top: 10px;
 
+  font-family: var(--lato-bold);
   font-size: 16px;
-  font-weight: 700;
   line-height: 20px;
   color: black;
 }

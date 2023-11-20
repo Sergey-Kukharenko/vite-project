@@ -24,7 +24,7 @@ defineProps({
   <div class="layout layout--desktop section-cards">
     <h1 v-if="title">{{ title }}</h1>
     <app-list-cards :list="list" class="list" />
-    <app-btn tag="a" :href="button.href">{{ button.label }}</app-btn>
+    <app-btn tag="a" :href="button.href" font-size="small">{{ button.label }}</app-btn>
   </div>
 </template>
 

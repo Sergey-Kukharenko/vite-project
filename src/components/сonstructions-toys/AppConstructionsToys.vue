@@ -26,7 +26,7 @@ const { title, description, list } = ref(dataConstructionsToys).value;
 
 .title {
   font-size: 24px;
-  font-weight: 700;
+  font-family: var(--lato-bold);
   line-height: 28px;
 }
 

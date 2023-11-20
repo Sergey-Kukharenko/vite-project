@@ -29,8 +29,8 @@ const { popular } = ref(dataSearch).value;
 }
 
 .title {
+  font-family: var(--lato-bold);
   font-size: 22px;
-  font-weight: 700;
   color: black;
 }
 </style>
