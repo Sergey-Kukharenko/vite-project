@@ -25,7 +25,7 @@ const changeableAlign = computed(() => (isMobile.value ? 'end' : 'start'));
 
 <template>
   <app-header-location-btn @click="openModal" />
-  <app-modal :visible="isModalVisible" :align="changeableAlign" width="628" @close="closeModal">
+  <app-modal :visible="isModalVisible" :align="changeableAlign" width="628" title="Выберите город" @close="closeModal">
     <app-header-cities @close="closeModal" />
   </app-modal>
 </template>

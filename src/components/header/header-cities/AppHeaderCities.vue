@@ -14,7 +14,6 @@ const onSubmit = () => {
 
 <template>
   <div class="header-cities">
-    <div class="title">Выберите город</div>
     <form id="city-search-form" @submit.prevent="onSubmit">
       <app-input v-model="city" grow placeholder="Поиск города" icon="magnifying-glass" align-icon="start" />
     </form>
@@ -27,12 +26,6 @@ const onSubmit = () => {
   display: flex;
   flex-direction: column;
   row-gap: 24px;
-}
-
-.title {
-  font-family: var(--lato-bold);
-  font-size: 22px;
-  line-height: 30px;
 }
 
 :deep(.icon) {

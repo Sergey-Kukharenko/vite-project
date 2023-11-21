@@ -74,18 +74,35 @@
   background-color: white;
 }
 
-.button {
-  position: absolute;
-  top: 15px;
-  right: 15px;
+.title {
 
-  padding: 5px;
+  @include gt-sm {
+    padding-bottom: 24px;
+  }
+
+  @include lt-md {
+    padding-bottom: 16px;
+  }
+
+  font-family: var(--lato-bold);
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.button {
+  @include gt-sm {
+    padding: 24px;
+  }
+
+  @include lt-md {
+    padding: 16px;
+  }
+
+  position: absolute;
+  top: 0;
+  right: 0;
 
   background: none;
   border: none;
   border-radius: 50%;
-
-  &:hover {
-    color: darken(#8b8b8b, 20%);
-  }
 }

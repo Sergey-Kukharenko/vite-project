@@ -12,6 +12,11 @@ const props = defineProps({
     }
   },
 
+  title: {
+    type: String,
+    default: ''
+  },
+
   closeBtn: {
     type: Boolean,
     required: true
@@ -64,6 +69,7 @@ const styles = computed(() => ({
     <div :class="classNames">
       <div class="overlay" @click="close" />
       <div class="content" v-bind="styles">
+        <div v-if="title" class="title">{{ title }}</div>
         <slot />
         <button v-if="props.closeBtn" type="button" class="button" @click="close">
           <app-icon name="close" />

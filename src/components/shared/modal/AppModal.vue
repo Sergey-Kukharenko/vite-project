@@ -15,6 +15,11 @@ const props = defineProps({
     }
   },
 
+  title: {
+    type: String,
+    default: ''
+  },
+
   closeBtn: {
     type: Boolean,
     default: true
@@ -44,6 +49,7 @@ const close = () => emit('close');
   <AppModalAbstraction
     v-if="props.visible"
     :align="props.align"
+    :title="props.title"
     :close-btn="props.closeBtn"
     :width="props.width"
     :grow="props.grow"
