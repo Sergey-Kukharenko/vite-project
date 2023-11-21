@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue';
 import AppIcon from '@/components/shared/AppIcon.vue';
+import { useIMask } from 'vue-imask';
 
 const props = defineProps({
   modelValue: {
@@ -14,6 +15,11 @@ const props = defineProps({
     validator(value) {
       return ['text', 'email'].includes(value);
     }
+  },
+
+  tel: {
+    type: Boolean,
+    default: false
   },
 
   placeholder: {
@@ -74,12 +80,24 @@ const classNames = computed(() => ({
   [`app-input--error`]: props.errors.length,
   [`app-input--align-icon-${props.alignIcon}`]: props.alignIcon
 }));
+
+let inputRef;
+
+if (props.tel) {
+  const { el } = useIMask({
+    mask: '{+7 (900)} 000-00-00'
+    // lazy: false
+  });
+
+  inputRef = el;
+}
 </script>
 
 <template>
   <div :class="classNames">
     <label>
       <input
+        ref="inputRef"
         :value="modelValue"
         :type="type"
         :placeholder="placeholder"

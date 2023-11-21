@@ -1,6 +1,4 @@
 <script setup>
-import AppHeader from '@/components/header/AppHeader.vue';
-import AppMenu from '@/components/menu/AppMenu.vue';
 import { computed } from 'vue';
 import { useMq } from 'vue3-mq';
 import AppMenuProfile from '@/components/menu/menu-profile/AppMenuProfile.vue';
