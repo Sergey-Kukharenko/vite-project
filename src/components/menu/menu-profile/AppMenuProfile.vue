@@ -4,8 +4,9 @@ import AppModal from '@/components/shared/modal/AppModal.vue';
 import { computed, ref } from 'vue';
 import { disableScroll, enableScroll } from '@/helpers/scrollLock.js';
 import { useMq } from 'vue3-mq';
+import AppAuth from '@/components/auth/AppAuth.vue';
 
-const isModalVisible = ref(false);
+const isModalVisible = ref(true);
 
 const openModal = () => {
   isModalVisible.value = true;
@@ -25,6 +26,14 @@ const changeableAlign = computed(() => (isMobile.value ? 'end' : 'start'));
 <template>
   <div class="menu-profile">
     <app-menu-link icon="menu-profile" :count="1" @click="openModal">Войти</app-menu-link>
-    <app-modal :visible="isModalVisible" :align="changeableAlign" width="628" @close="closeModal"> HI</app-modal>
+    <app-modal
+      :visible="isModalVisible"
+      :align="changeableAlign"
+      width="360"
+      title="Войти или зарегистрироваться"
+      @close="closeModal"
+    >
+      <app-auth />
+    </app-modal>
   </div>
 </template>
