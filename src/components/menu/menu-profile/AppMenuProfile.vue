@@ -25,7 +25,7 @@ const changeableAlign = computed(() => (isMobile.value ? 'end' : 'start'));
 
 <template>
   <div class="menu-profile">
-    <app-menu-link icon="menu-profile" :count="1" @click="openModal">Войти</app-menu-link>
+    <app-menu-link icon="menu-profile" @click="openModal">Войти</app-menu-link>
     <app-modal
       :visible="isModalVisible"
       :align="changeableAlign"

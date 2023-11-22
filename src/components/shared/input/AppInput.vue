@@ -17,7 +17,7 @@ const props = defineProps({
     }
   },
 
-  tel: {
+  phone: {
     type: Boolean,
     default: false
   },
@@ -81,28 +81,29 @@ const classNames = computed(() => ({
   [`app-input--align-icon-${props.alignIcon}`]: props.alignIcon
 }));
 
-let inputRef;
-
-if (props.tel) {
-  const { el } = useIMask({
-    mask: '{+7 (900)} 000-00-00'
-    // lazy: false
-  });
-
-  inputRef = el;
-}
+// let maskRef;
+//
+// if (props.phone) {
+//   const res = useIMask({
+//     mask: '{+7 (900)} 000-00-00'
+//     // lazy: false
+//   });
+//
+//   console.log(res);
+//   maskRef = res.el;
+// }
 </script>
 
 <template>
   <div :class="classNames">
     <label>
       <input
-        ref="inputRef"
+        ref="maskRef"
         :value="modelValue"
         :type="type"
         :placeholder="placeholder"
         :disabled="disabled"
-        @input="$emit('update:modelValue', $event.target.value)"
+        @input="[$emit('update:modelValue', $event.target.value)]"
       />
       <app-icon v-if="icon" :name="icon" />
     </label>
