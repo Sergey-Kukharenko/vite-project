@@ -6,7 +6,7 @@ import { disableScroll, enableScroll } from '@/helpers/scrollLock.js';
 import { useMq } from 'vue3-mq';
 import AppAuth from '@/components/auth/AppAuth.vue';
 
-const isModalVisible = ref(true);
+const isModalVisible = ref(false);
 
 const openModal = () => {
   isModalVisible.value = true;

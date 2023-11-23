@@ -2,7 +2,7 @@
 import { reactive } from 'vue';
 import AppInput from '@/components/shared/input/AppInput.vue';
 import AppBtn from '@/components/shared/btn/AppBtn.vue';
-import { helpers, minLength, required } from '@vuelidate/validators';
+import { helpers, maxLength, minLength, required } from '@vuelidate/validators';
 import { useVuelidate } from '@vuelidate/core';
 
 defineProps({
@@ -21,7 +21,7 @@ const state = reactive({
 const rules = {
   phone: {
     required: helpers.withMessage('This field cannot be empty', required),
-    minLength: minLength(2)
+    minLength: helpers.withMessage(({ $params }) => `Phone number should contain ${$params.min} digits.`, minLength(18))
   }
 };
 

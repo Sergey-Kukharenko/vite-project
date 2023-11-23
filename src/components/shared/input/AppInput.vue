@@ -81,17 +81,16 @@ const classNames = computed(() => ({
   [`app-input--align-icon-${props.alignIcon}`]: props.alignIcon
 }));
 
-// let maskRef;
-//
-// if (props.phone) {
-//   const res = useIMask({
-//     mask: '{+7 (900)} 000-00-00'
-//     // lazy: false
-//   });
-//
-//   console.log(res);
-//   maskRef = res.el;
-// }
+let maskRef;
+
+if (props.phone) {
+  const res = useIMask({
+    mask: '{+7 (900)} 000-00-00'
+    // lazy: false
+  });
+
+  maskRef = res.el;
+}
 </script>
 
 <template>
