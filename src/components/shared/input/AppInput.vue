@@ -85,8 +85,11 @@ let maskRef;
 
 if (props.phone) {
   const res = useIMask({
-    mask: '{+7 (900)} 000-00-00'
-    // lazy: false
+    mask: '+{7} (#00) 000-00-00',
+
+    definitions: {
+      '#': /9/
+    },
   });
 
   maskRef = res.el;
